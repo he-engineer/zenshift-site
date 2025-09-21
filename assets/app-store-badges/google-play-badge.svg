@@ -1,0 +1,10 @@
+<svg width="150" height="45" viewBox="0 0 150 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Google Play Badge Placeholder -->
+  <rect width="150" height="45" rx="6" fill="#000000"/>
+  <text x="20" y="16" fill="white" font-family="Arial, sans-serif" font-size="8">GET IT ON</text>
+  <text x="20" y="32" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Google Play</text>
+
+  <!-- Google Play logo placeholder -->
+  <polygon points="120,12 130,22 120,32" fill="#34A853"/>
+  <polygon points="130,22 135,18 135,26" fill="#EA4335"/>
+</svg>

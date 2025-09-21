@@ -1,0 +1,11 @@
+<svg width="150" height="45" viewBox="0 0 150 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- App Store Badge Placeholder -->
+  <rect width="150" height="45" rx="6" fill="#000000"/>
+  <text x="20" y="16" fill="white" font-family="Arial, sans-serif" font-size="8">Download on the</text>
+  <text x="20" y="32" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">App Store</text>
+
+  <!-- Apple logo placeholder -->
+  <circle cx="125" cy="22" r="8" fill="white"/>
+  <path d="M125 18 L125 26" stroke="black" stroke-width="1"/>
+  <path d="M121 22 L129 22" stroke="black" stroke-width="1"/>
+</svg>

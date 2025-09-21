@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://zenshift.app/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Block sensitive areas (none for this static site)
+# Allow all public pages for maximum discoverability
