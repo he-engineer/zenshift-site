@@ -1,13 +1,13 @@
 # Product Requirements Document (PRD)
 
-## ZenShift Static Website
+## ZenShift Meditation Coach Static Website
 
 ---
 
 ## Product Overview
 
-**Product Name:** ZenShift Website
-**Product Description:** Professional static website for ZenShift Coach - an AI-powered, need-driven meditation coach built by One Ping Fan Venture LLC
+**Product Name:** ZenShift Meditation Coach Website
+**Product Description:** Professional static website for ZenShift Meditation Coach - your mindfulness companion built by One Ping Fan Venture LLC
 **Target Deployment:** GitHub Pages
 **Primary Purpose:** Establish professional company presence and support app store organization verification
 
@@ -15,10 +15,10 @@
 
 ## Company Positioning
 
-ZenShift Coach is an **AI-powered, need-driven meditation coach** built by One Ping Fan Venture LLC.
+ZenShift Meditation Coach is your **mindfulness companion** that helps reduce stress, build focus, and bring calm into your day with guided sessions designed for busy lives.
 
 ### Vision & Mission
-Making personalized mindfulness accessible through technology.
+Transform stress into calm, distraction into focus, and everyday moments into mindful experiences.
 
 ---
 
@@ -26,7 +26,7 @@ Making personalized mindfulness accessible through technology.
 
 ### Primary Goals
 1. **Professional Presence**: Establish One Ping Fan Venture LLC as a legitimate technology company
-2. **Product Showcase**: Present ZenShift Coach as an innovative AI-powered meditation solution
+2. **Product Showcase**: Present ZenShift Meditation Coach as your mindfulness companion with instant relief features
 3. **Organization Verification**: Provide necessary information for app store organization status claims
 4. **User Acquisition**: Drive downloads and interest in the ZenShift Coach mobile app
 
@@ -42,7 +42,7 @@ Making personalized mindfulness accessible through technology.
 
 ### Primary Audience
 - **App Store Reviewers**: Verifying company legitimacy for organization status
-- **Potential Users**: Professionals seeking personalized meditation solutions
+- **Potential Users**: Busy professionals needing quick stress relief, beginners seeking guided structure, experienced meditators looking for variety
 - **Business Partners**: Evaluating partnership opportunities
 - **Investors**: Assessing company and product viability
 
@@ -90,52 +90,46 @@ Making personalized mindfulness accessible through technology.
 
 ## Product Insights from ZenShift Coach App
 
-### Core Product Features (Validated by Codebase Analysis)
+### Core Product Features (As Presented on Website)
 
-#### 1. AI-Powered Intent Prediction
-- **Smart Session Recommendations**: Algorithm analyzes time of day, usage patterns, and expressed needs
-- **Context-Aware Suggestions**: Considers user's current emotional state and available time
-- **One-Click Play**: Primary recommendation can be started with single tap
-- **Learning System**: Adapts based on user feedback and completion patterns
+#### 1. Meditation & Mindfulness
+- **Guided Sessions**: From 2 to 10 minutes, designed for busy lives
+- **Dynamic Recommendations**: Based on your mood and available time
+- **Favorites System**: Quick access to your preferred content
+- **Premium Audio**: Soothing narration with carefully selected background music
 
-#### 2. Need-Driven Interface
-- **Single Screen Approach**: Primary interaction through one home screen with input area
-- **Context Chips**: Quick selection for common needs ("stressed", "anxious", "tired", "need focus")
-- **Duration Chips**: Time-based options (2, 5, 10, 15, 30 minutes)
-- **No Catalog Browsing**: AI eliminates need for manual content discovery
+#### 2. Instant Relief
+- **One-Tap Feature**: Delivers the right calming session when you need it most
+- **No Endless Menus**: Connect instantly with the most appropriate calming session
+- **Quick Reset**: Just tap, breathe, and reset when stress strikes
+- **Fast Access**: Optimized for immediate relief
 
-#### 3. Personalized Content Library
-- **Pre-Generated Sessions**: High-quality meditation content mapped to specific needs
-- **Dynamic Recommendations**: Real-time matching of user context to appropriate content
-- **Multiple Categories**: Stress relief, sleep, focus, mindfulness, energy, relaxation, reset breaks
-- **Adaptive Duration**: Sessions ranging from 2-60 minutes based on user preferences
+#### 3. Progress & Motivation
+- **Session History**: Track your meditation journey over time
+- **Weekly Stats Dashboard**: Monitor your consistency and growth
+- **Visual Progress Indicators**: See your streak and improvement
+- **Achievement Milestones**: Celebrate your progress and build consistency
 
-#### 4. Advanced Analytics & Learning
-- **Usage Pattern Tracking**: Monitors completion rates, preferred times, session effectiveness
-- **Relief Outcome Tracking**: Post-session feedback improves future recommendations
-- **A/B Testing Framework**: Continuous optimization of recommendation algorithms
-- **Performance Metrics**: Tracks time-to-play and tap counts
+#### 4. Accessibility & Design
+- **Beautiful Interface**: Intuitive single-screen design
+- **Full Screen Reader Support**: Complete accessibility for all users
+- **Fast Loading**: Optimized for seamless playback without interruption
+- **Cross-Platform**: Available on Android (iOS coming soon)
 
-#### 5. Seamless User Experience
-- **Fast Load Times**: App ready in <5 seconds, audio starts in <2 seconds
-- **Offline Capability**: Pre-loaded content works without internet connection
-- **Cross-Platform**: iOS, Android, and web with feature parity
-- **Accessibility**: Full keyboard navigation, screen reader support, responsive design
+### What Makes ZenShift Meditation Coach Unique
 
-### Competitive Differentiation
+#### Core Differentiators
+1. **Mindfulness Companion**: Not just an app, but your personal companion for stress relief
+2. **Instant Relief**: One-tap access to the right session without browsing
+3. **Designed for Busy Lives**: Quick sessions from 2-10 minutes that fit any schedule
+4. **Adaptable to Your Needs**: Whether beginner or experienced, finds the right balance
+5. **Privacy-First**: Your meditation data stays private and secure
 
-#### What Makes ZenShift Unique
-1. **AI-First Approach**: Only meditation app with true intent prediction and contextual recommendations
-2. **Speed to Relief**: Fastest path from app open to meditation start (target: <8 seconds)
-3. **Professional Focus**: Specifically designed for busy professionals with limited time
-4. **No Browsing Required**: Eliminates decision fatigue through intelligent curation
-5. **Micro-Session Expertise**: Optimized for short, effective sessions (2-10 minutes)
-
-#### Competitive Advantages
-- **vs Headspace/Calm**: More personalized, faster to start, professional-focused
-- **vs Insight Timer**: No overwhelming content library, AI-guided experience
-- **vs Waking Up**: More accessible to beginners, practical workplace applications
-- **vs Ten Percent Happier**: Superior technology integration, better personalization
+#### Target Audience (Who It's For)
+- **Busy Professionals**: Needing quick stress relief between meetings
+- **Beginners**: Seeking guided structure and clear direction
+- **Experienced Meditators**: Looking for variety and convenience
+- **Anyone Building Habits**: Wanting to make mindfulness a consistent practice
 
 ---
 
@@ -144,7 +138,7 @@ Making personalized mindfulness accessible through technology.
 ### Epic 1: Professional Company Presence
 
 #### US-001: App Store Organization Verification
-**As an** app store reviewer evaluating ZenShift Coach for organization status,
+**As an** app store reviewer evaluating ZenShift Meditation Coach for organization status,
 **I want** to easily verify One Ping Fan Venture LLC's legitimacy and product information,
 **So that** I can approve the organization verification with confidence.
 
@@ -168,12 +162,12 @@ Making personalized mindfulness accessible through technology.
 
 #### US-003: Professional User Discovery
 **As a** busy professional searching for meditation solutions,
-**I want** to quickly understand how ZenShift solves my specific time and stress challenges,
+**I want** to quickly understand how ZenShift Meditation Coach helps me find calm in my busy life,
 **So that** I can decide if it's worth downloading and trying.
 
 **Acceptance Criteria:**
 - **Given** I have limited time to evaluate apps, **When** I visit the website, **Then** I can understand the core value proposition within 10 seconds of page load
-- **Given** I'm skeptical about meditation apps, **When** I read about ZenShift's approach, **Then** I can see specific evidence of how it differs from generic meditation apps (AI-powered, professional-focused, 2-15 minute sessions)
+- **Given** I'm skeptical about meditation apps, **When** I read about ZenShift's approach, **Then** I can see specific evidence of how it differs from generic meditation apps (one-tap relief, designed for busy lives, 2-10 minute sessions)
 - **Given** I need proof of effectiveness, **When** I review user benefits, **Then** I can find concrete metrics like "90% report feeling better" and "8 seconds from open to play"
 - **Given** I want to try before committing, **When** I look for download options, **Then** I can easily access app store links with clear device compatibility information
 
@@ -220,40 +214,43 @@ Making personalized mindfulness accessible through technology.
 - **Download CTA**: Prominent app store badges (when available)
 
 ### 2. Hero Section
-- **Headline**: "Your AI-Powered Meditation Coach That Actually Understands Your Needs"
-- **Subheadline**: "Open the app, express how you're feeling, and get a perfectly matched meditation in seconds. No browsing, no decision fatigue—just immediate calm."
-- **Value Proposition**: Emphasize speed to relief and intelligent personalization
-- **Key Metrics Display**: "8 seconds from open to play" • "90% report feeling better" • "Used by 10,000+ professionals"
-- **Primary CTA**: Download app buttons with version compatibility
-- **Hero Visual**: Split-screen showing stressed professional and app interface with instant recommendations
+- **Headline**: "ZenShift Meditation Coach is Your Mindfulness Companion"
+- **Subheadline**: "Reduce stress, build focus, and bring calm into your day with guided sessions designed for busy lives. From quick breathing exercises to deeper practices, ZenShift helps you make mindfulness a consistent habit."
+- **Value Proposition**: Mindfulness companion for busy lives with instant relief
+- **Key Metrics Display**: "One-tap instant relief" • "2-10 min guided sessions"
+- **Primary CTA**: Download Free App (Android available, iOS coming soon)
+- **Hero Visual**: App interface showcasing the meditation coach experience
 
 ### 3. Product Section
-- **Section Title**: "Intelligent Meditation Coaching"
+- **Section Title**: "ZenShift Features"
+- **Section Subtitle**: "Feel better by choosing a meditation session that matches your mood and schedule"
 - **Key Features**:
-  - AI-powered session recommendations
-  - Need-driven approach (stress, focus, sleep, etc.)
-  - Personalized meditation experiences
-  - Professional-grade audio content
-- **Feature Cards**: 3-4 key benefits with icons and descriptions
+  - Meditation & Mindfulness (guided sessions, dynamic recommendations, favorites)
+  - Instant Relief (one-tap feature for immediate calm)
+  - Progress & Motivation (history, stats, milestones)
+  - Accessibility & Design (beautiful interface, screen reader support)
+- **Feature Cards**: 4 key features with icons and detailed descriptions
 
 ### 4. How It Works Section
-- **Section Title**: "From Stressed to Calm in 3 Simple Steps"
+- **Section Title**: "Find Your ZenShift in 3 Simple Steps"
+- **Section Subtitle**: "Take a deep breath and find your ZenShift. Transform stress into calm, distraction into focus."
 - **Process Steps**:
-  1. **Express Your Need** (5 seconds): Tap context chips like "stressed before meeting" or "can't focus"
-  2. **Get Instant Match** (3 seconds): AI analyzes 40+ factors to recommend your perfect session
-  3. **Experience Relief** (2-15 minutes): Start immediately with professionally-guided meditation
-- **Performance Promise**: "90% of users start feeling better within the first 2 minutes"
-- **Visual Flow**: Animated sequence showing real app interactions with timing indicators
+  1. **Choose Your Session**: Select a meditation that matches your mood and schedule
+  2. **Experience Instant Relief**: Use the one-tap feature or browse favorites
+  3. **Track Your Progress**: Monitor your journey with stats and milestones
+- **Target Audience**: Busy professionals, beginners, experienced meditators, anyone building habits
+- **Visual Flow**: Step-by-step process with app screenshots
 
 ### 5. App Preview Section
-- **Section Title**: "See the AI Intelligence in Action"
-- **Screenshots**: Key app screens showcasing AI features
-  - **Need-Based Home Screen**: Context chips, duration selection, instant recommendations
-  - **AI Recommendation Engine**: Multiple session options with confidence scores and reasoning
-  - **Smart Session Player**: Adaptive audio with real-time feedback collection
-  - **Analytics Dashboard**: Usage patterns, effectiveness tracking, personalized insights
-- **Interactive Elements**: Hover states showing before/after recommendation changes
-- **Caption Text**: Focus on AI intelligence and personalization benefits
+- **Section Title**: "Experience ZenShift Meditation Coach"
+- **Section Subtitle**: "Enjoy premium audio with soothing narration and carefully selected background music"
+- **Screenshots**: Key app screens showcasing features
+  - **Intuitive Home Screen**: Beautiful single-screen interface with quick access
+  - **Dynamic Recommendations**: Personalized based on mood and time
+  - **Premium Audio Experience**: Soothing narration optimized for seamless playback
+  - **Progress Tracking**: Session history, weekly stats, and achievement milestones
+- **Interactive Elements**: Clean presentation of app capabilities
+- **Caption Text**: Focus on user experience and accessibility
 
 ### 6. Company Section
 - **Section Title**: "About One Ping Fan Venture LLC"
@@ -265,10 +262,12 @@ Making personalized mindfulness accessible through technology.
 - **Contact Information**: Professional business contact details
 
 ### 7. Download Section
-- **Section Title**: "Get ZenShift Coach"
-- **App Store Badges**: iOS App Store and Google Play Store buttons
-- **Availability Note**: Information about current availability and beta testing
-- **QR Code**: Optional QR code for easy mobile download
+- **Section Title**: "Download ZenShift Meditation Coach"
+- **Section Subtitle**: "Transform stress into calm, distraction into focus, and everyday moments into mindful experiences"
+- **App Store Badges**: Google Play Store (active) and iOS "Coming Soon" badge
+- **Availability Note**: Android 8.0+ available now, iOS coming soon with intelligent features
+- **Privacy Note**: "Your meditation data stays private and secure"
+- **QR Code**: QR code for Android download
 
 ### 8. Footer
 - **Company Info**: One Ping Fan Venture LLC copyright
@@ -438,27 +437,27 @@ Making personalized mindfulness accessible through technology.
 ### Messaging Framework (Updated Based on App Analysis)
 
 #### Primary Value Proposition
-**"The only meditation app that actually understands what you need, when you need it"**
+**"ZenShift Meditation Coach is your mindfulness companion"**
 
 #### Core Messages (Hierarchy by Importance)
-1. **Speed to Relief**: "From stressed to calm in under 30 seconds" (app open to meditation start)
-2. **AI Personalization**: "Intelligent recommendations based on 40+ contextual factors"
-3. **Professional Focus**: "Built for busy professionals who need immediate, effective calm"
-4. **No Decision Fatigue**: "Zero browsing, zero overwhelm—just tap and breathe"
-5. **Proven Effectiveness**: "90% of users report feeling better within 2 minutes"
+1. **Mindfulness Companion**: "Reduce stress, build focus, and bring calm into your day"
+2. **Designed for Busy Lives**: "Guided sessions from 2 to 10 minutes that fit any schedule"
+3. **Instant Relief**: "One-tap feature delivers the right calming session when you need it most"
+4. **Adaptive to Your Needs**: "From quick breathing exercises to deeper practices"
+5. **Build Consistency**: "Track your journey with session history, stats, and achievement milestones"
 
 #### Supporting Proof Points
-- **Technology Innovation**: Proprietary intent prediction algorithms and contextual AI
-- **User-Centric Design**: Single-screen interface eliminates app complexity
-- **Professional Validation**: Used by 10,000+ working professionals
-- **Quality Assurance**: Cross-platform testing, accessibility compliance, performance optimization
-- **Continuous Learning**: Machine learning algorithms adapt to individual usage patterns
+- **Premium Quality**: Soothing narration with carefully selected background music
+- **User-Centric Design**: Beautiful, intuitive single-screen interface
+- **Full Accessibility**: Complete screen reader support for all users
+- **Privacy-First**: Your meditation data stays private and secure
+- **Proven Effectiveness**: Helps busy professionals, beginners, and experienced meditators alike
 
-#### Competitive Differentiation Messages
-- **vs. Traditional Apps**: "No endless scrolling through meditation libraries"
-- **vs. Generic Solutions**: "Understands your specific workplace stress, not just 'relaxation'"
-- **vs. Time-Intensive Options**: "Effective in 2-15 minutes, not 20-60 minutes"
-- **vs. One-Size-Fits-All**: "Learns your patterns and adapts recommendations over time"
+#### Key Differentiators
+- **vs. Complex Apps**: "No need to scroll through endless menus - just tap, breathe, and reset"
+- **vs. Time-Intensive Options**: "Sessions from 2-10 minutes designed for busy schedules"
+- **vs. One-Size-Fits-All**: "Adapts to whether you're a beginner or experienced meditator"
+- **vs. Data-Heavy Apps**: "Your meditation data stays private and secure on your device"
 
 ### Content Requirements (Enhanced with App Insights)
 
@@ -559,12 +558,12 @@ Making personalized mindfulness accessible through technology.
 
 #### 2. User Acquisition and Conversion
 - **Website to App Store Conversion**:
-  - **Baseline**: Industry average 2-5%
-  - **Target**: 8-12% (above industry average due to qualified traffic)
-  - **Measurement**: Click-through rate from website CTAs to app store pages
-- **App Store Conversion Rate**:
-  - **Target**: 15-25% (app store page to download)
-  - **Measurement**: App store analytics showing download rates from organic traffic
+  - **Current**: Android on Google Play Store
+  - **Target**: 5-8% conversion for Android users
+  - **Future**: iOS launch to expand reach
+- **App Download Metrics**:
+  - **Target**: Steady growth in Android downloads
+  - **Measurement**: Google Play Console analytics
 
 #### 3. Professional Credibility Metrics
 - **Time to Understanding**: User comprehends value proposition within 10 seconds
@@ -795,6 +794,6 @@ Making personalized mindfulness accessible through technology.
 
 ---
 
-*Document Version: 1.0*
-*Last Updated: 2025-01-20*
+*Document Version: 2.0*
+*Last Updated: 2025-09-26*
 *Document Owner: One Ping Fan Venture LLC*
