@@ -4,33 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ZenShift | AI Meditation Coach with Custom Sessions</title>
-  <meta name="title" content="ZenShift | AI Meditation Coach with Custom Sessions">
-  <meta name="description" content="ZenShift pairs an AI coach with curated audio and on-demand generation. Android app live with Google Play billing; iOS billing not yet live.">
-  <meta name="keywords" content="ZenShift, meditation app, AI coach, custom meditation generation, Android meditation, stress relief, mindfulness, Bedrock AI, AWS serverless">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>ZenShift Meditation Coach - AI Coach with Custom Sessions</title>
+  <meta name="title" content="ZenShift Meditation Coach - AI Coach with Custom Sessions">
+  <meta name="description" content="AI coach plus curated audio and custom generation. Android app live with Google Play billing; iOS billing not implemented yet.">
+  <meta name="keywords" content="ZenShift, AI meditation coach, custom session generation, Android meditation app, stress relief, mindfulness, Bedrock, AWS serverless">
   <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
   <meta name="author" content="One Ping Fan Venture LLC">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zenshift.onepingfanventure.com/">
-  <meta property="og:title" content="ZenShift | AI Meditation Coach with Custom Sessions">
-  <meta property="og:description" content="AI coach, curated sessions, and custom audio generation. Android live; Google Play billing connected.">
+  <meta property="og:title" content="ZenShift Meditation Coach - Your Mindfulness Companion">
+  <meta property="og:description" content="Reduce stress, build focus, and bring calm into your day with guided sessions designed for busy lives. From quick breathing exercises to deeper practices.">
   <meta property="og:image" content="https://zenshift.onepingfanventure.com/assets/images/zenshift-social-preview.png">
+  <meta property="og:site_name" content="ZenShift Meditation Coach">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://zenshift.onepingfanventure.com/">
-  <meta property="twitter:title" content="ZenShift | AI Meditation Coach with Custom Sessions">
-  <meta property="twitter:description" content="AI coach, curated sessions, and custom audio generation. Android live; Google Play billing connected.">
+  <meta property="twitter:title" content="ZenShift Meditation Coach - Your Mindfulness Companion">
+  <meta property="twitter:description" content="Reduce stress, build focus, and bring calm into your day with guided sessions designed for busy lives. From quick breathing exercises to deeper practices.">
   <meta property="twitter:image" content="https://zenshift.onepingfanventure.com/assets/images/zenshift-social-preview.png">
 
   <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
 
-  <!-- Schema.org -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,11 +43,16 @@
     "name": "ZenShift Meditation Coach",
     "description": "AI-powered meditation coach with curated audio and custom session generation.",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "Android (iOS billing not yet live)",
+    "operatingSystem": "Android (iOS billing not implemented)",
     "offers": {
       "@type": "Offer",
       "price": "1.00",
       "priceCurrency": "USD"
+    },
+    "developer": {
+      "@type": "Organization",
+      "name": "One Ping Fan Venture LLC",
+      "url": "https://zenshift.onepingfanventure.com"
     },
     "downloadUrl": [
       "https://play.google.com/store/apps/details?id=com.zenshift.meditation"
@@ -50,374 +60,495 @@
   }
   </script>
 
+  <!-- Performance & Security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Critical CSS (inlined for performance) -->
+  <style>
+    /* Critical above-the-fold styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #1A1D2E;
+      background-color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1A1D2E 0%, #2D6A6C 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #2D6A6C;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+  </style>
 </head>
 <body>
+  <!-- Skip Navigation for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Header Navigation -->
   <header class="header" role="banner">
-    <div class="container navbar">
-      <a class="logo" href="#">
-        <img src="/assets/images/app-icon.png" alt="ZenShift logo">
-        <div>
-          <div>ZenShift</div>
-          <small>AI Meditation Coach</small>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="navbar-content">
+          <div class="navbar-brand">
+            <a href="#" class="logo" aria-label="ZenShift Meditation Coach Home">
+              <img src="/assets/images/app-icon.png" alt="ZenShift Meditation Coach" width="32" height="32">
+              <span class="logo-text">ZenShift</span>
+            </a>
+          </div>
+
+          <div class="navbar-menu" id="navbar-menu">
+            <ul class="navbar-nav" role="menubar">
+              <li role="none">
+                <a href="#product" class="nav-link" role="menuitem">Product</a>
+              </li>
+              <li role="none">
+                <a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a>
+              </li>
+              <li role="none">
+                <a href="#company" class="nav-link" role="menuitem">Company</a>
+              </li>
+              <li role="none">
+                <a href="#download" class="nav-link" role="menuitem">Download</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navbar-actions">
+            <a href="#download" class="btn btn-primary">Get the App</a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+              <span class="navbar-toggle-icon"></span>
+            </button>
+          </div>
         </div>
-      </a>
-      <ul class="nav-links" role="menubar">
-        <li role="none"><a role="menuitem" href="#product">Product</a></li>
-        <li role="none"><a role="menuitem" href="#ai">AI & Personalization</a></li>
-        <li role="none"><a role="menuitem" href="#pricing">Pricing</a></li>
-        <li role="none"><a role="menuitem" href="#tech">Architecture</a></li>
-        <li role="none"><a role="menuitem" href="#faq">FAQ</a></li>
-      </ul>
-      <div class="cta-group">
-        <a class="btn btn-text" href="#contact">Contact</a>
-        <a class="btn btn-primary" href="#download">Get ZenShift</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main id="main-content">
-    <section class="section hero" aria-labelledby="hero-title">
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
       <div class="container">
-        <div class="hero-surface">
-          <div class="hero-grid">
-            <div>
-              <div class="logo-row" aria-label="ZenShift brand">
-                <img src="/assets/images/app-icon.png" alt="ZenShift app icon">
-                <span>ZenShift • AI Coach</span>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 id="hero-heading" class="hero-title">
+              AI meditation coach with custom sessions. Android app live.
+            </h1>
+            <p class="hero-subtitle">
+              Talk to the AI coach, get a tailored pick from 20 curated sessions, or approve a custom, narrated session with ambient music. History, favorites, and offline sync are built in. Google Play billing is live; iOS billing is not implemented yet.
+            </p>
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <span class="metric-value">Android</span>
+                <span class="metric-label">Live with billing</span>
               </div>
-              <div class="eyebrow">Android app live · Google Play billing connected</div>
-              <h1 id="hero-title">AI meditation coach that matches what you need in seconds.</h1>
-              <p>Describe what’s going on—stress, sleep, focus. ZenShift’s AI coach recommends the right track or spins up a custom, narrated session with ambient music. Offline sync, history, and favorites keep you on track.</p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.zenshift.meditation" id="download">Get on Google Play</a>
-                <a class="btn btn-ghost" href="mailto:zenshift-support@onepingfanventure.com?subject=ZenShift%20Access">Request access / iOS updates</a>
+              <div class="metric">
+                <span class="metric-value">Custom</span>
+                <span class="metric-label">Audio generation</span>
               </div>
-              <div class="hero-meta">
-                <div class="meta-tile">
-                  <span class="meta-label">AI Coach</span>
-                  <span class="meta-value">Bedrock Nova Micro</span>
-                  <span class="meta-hint">Conversational flow with safety rails</span>
-                </div>
-                <div class="meta-tile">
-                  <span class="meta-label">Custom audio</span>
-                  <span class="meta-value">Narration + music</span>
-                  <span class="meta-hint">Generated via serverless pipeline</span>
-                </div>
-                <div class="meta-tile">
-                  <span class="meta-label">Billing</span>
-                  <span class="meta-value">Google Play live</span>
-                  <span class="meta-hint">iOS billing not live yet</span>
-                </div>
+              <div class="metric">
+                <span class="metric-value">Bedrock</span>
+                <span class="metric-label">AI coach</span>
               </div>
             </div>
-            <div class="hero-visual" aria-label="Key screens">
-              <div class="visual-card">
-                <h4>Need-based home</h4>
-                <p>Intent chips and quick play for 3–10 minute relief.</p>
-                <img src="/assets/images/screenshot-home.png" alt="ZenShift home screen">
-              </div>
-              <div class="visual-card">
-                <h4>AI chat + recommendations</h4>
-                <p>Conversational guidance, safety filters, and recommendations tied to the real catalog.</p>
-                <img src="/assets/images/screenshot-recommendations.png" alt="ZenShift AI chat screen">
-              </div>
+
+            <div class="hero-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.zenshift.meditation" class="btn btn-secondary btn-large">Get on Google Play</a>
+              <a href="mailto:zenshift-support@onepingfanventure.com?subject=ZenShift%20iOS%20updates" class="btn btn-ghost btn-large">Request iOS updates</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image">
+              <img src="/assets/images/app-hero-preview.png" alt="ZenShift Meditation Coach app interface" width="300" height="600" loading="eager">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="product" aria-labelledby="product-title">
+    <!-- Product Features Section -->
+    <section class="product-section" id="product" aria-labelledby="product-heading">
       <div class="container">
         <div class="section-header">
-          <div class="section-eyebrow">Product reality</div>
-          <h2 class="section-title" id="product-title">Built for busy professionals and skeptics alike.</h2>
-          <p class="section-subtitle">Everything here maps to live app code: AI coach, curated catalog, custom generation pipeline, and Android billing. No speculative features.</p>
+          <h2 id="product-heading" class="section-title">ZenShift Features</h2>
+          <p class="section-subtitle">
+            Built to match the live app: Bedrock-powered AI coach, curated catalog, on-demand generation pipeline, and offline-aware sync. All content here maps to shipped code.
+          </p>
         </div>
-        <div class="grid grid-3" style="margin-top: var(--space-6);">
-          <div class="card">
-            <div class="feature-icon">AI</div>
-            <h3>AI coach conversations</h3>
-            <p>Chat with an AI coach that reads your intent and timeframe, then proposes the best session or offers to generate one if confidence is low.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> Bedrock Nova Micro + LangGraph</li>
-              <li><span class="pill-check">✓</span> Safety chains and moderation</li>
-              <li><span class="pill-check">✓</span> Library matcher for relevance</li>
-            </ul>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 16c0-2.2 1.8-4 4-4h24c2.2 0 4 1.8 4 4v16c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4V16z" stroke="#2D6A6C" stroke-width="2"/>
+                <path d="M16 22h16M16 26h12M16 30h8" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI Coach Conversations</h3>
+            <p class="feature-description">
+              Talk naturally about stress, sleep, or focus. Bedrock Nova Micro with LangGraph state picks the right session and offers custom generation when confidence is low. Safety chains keep guidance in-bounds.
+            </p>
           </div>
-          <div class="card">
-            <div class="feature-icon">🎧</div>
-            <h3>Curated library + playback</h3>
-            <p>20 scripted sessions across stress, focus, sleep, and travel with dual-track audio, resume, and background play.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> Quick-play cards and intent chips</li>
-              <li><span class="pill-check">✓</span> Offline-capable sync</li>
-              <li><span class="pill-check">✓</span> History, favorites, notes</li>
-            </ul>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="20" stroke="#2D6A6C" stroke-width="2"/>
+                <path d="M24 16v8l6 4" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Custom Session Generation</h3>
+            <p class="feature-description">
+              Approve a custom session and the backend generates script → TTS narration → mixes ambient music in minutes, returning signed URLs to the app. Moderation runs before generation starts.
+            </p>
           </div>
-          <div class="card">
-            <div class="feature-icon">⚡</div>
-            <h3>On-demand generation</h3>
-            <p>Approve a custom session and the backend generates script + TTS + music in minutes, returning signed URLs to the app.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> Queue-based SQS worker</li>
-              <li><span class="pill-check">✓</span> Moderation before start</li>
-              <li><span class="pill-check">✓</span> Generated audio stored to S3</li>
-            </ul>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 4L32 16H16L24 4Z" stroke="#2D6A6C" stroke-width="2"/>
+                <circle cx="24" cy="28" r="8" stroke="#2D6A6C" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Library Matching</h3>
+            <p class="feature-description">
+              Discover 20 curated sessions across 10 categories (Stress, Focus, Sleep, Energy, Travel, and more). AI matches duration, mood, and intent for quick relief.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="6" width="36" height="24" rx="4" stroke="#2D6A6C" stroke-width="2"/>
+                <circle cx="18" cy="18" r="4" stroke="#2D6A6C" stroke-width="2"/>
+                <path d="M30 14l8 8M30 22l8-8" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Progress Tracking & Learning</h3>
+            <p class="feature-description">
+              History, streaks, and favorites with personal notes sync across devices with offline-first storage. Relief ratings and weekly goals keep you accountable.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how-it-works" aria-labelledby="flow-title">
-      <div class="container split">
-        <div class="section-header">
-          <div class="section-eyebrow">Flow</div>
-          <h2 class="section-title" id="flow-title">How ZenShift works end-to-end.</h2>
-          <p class="section-subtitle">Designed for fast relief: 1) capture need, 2) AI match, 3) play instantly or generate custom audio.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="chip">Step 1 · Capture</div>
-            <h3>State-aware intake</h3>
-            <p>Need-based home screen and AI chat capture goal, stressor, and time budget. Email/Google auth in-app.</p>
-          </div>
-          <div class="card">
-            <div class="chip">Step 2 · Match</div>
-            <h3>Confidence-scored picks</h3>
-            <p>Library matcher scores intent against curated catalog. If confidence is low, coach offers custom generation.</p>
-          </div>
-          <div class="card">
-            <div class="chip">Step 3 · Play/Generate</div>
-            <h3>Playback or custom audio</h3>
-            <p>Stream curated tracks with resume, or approve generation to receive narrated + music-mixed audio via signed URLs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ai" aria-labelledby="ai-title">
-      <div class="container split">
-        <div class="card">
-          <div class="badge">Personalization & AI</div>
-          <h2 class="section-title" id="ai-title">AI that stays grounded in the real catalog.</h2>
-          <p class="section-subtitle">Bedrock Nova Micro powers the coach; a separate generation pipeline handles narrated audio with background music.</p>
-          <ul class="list-muted">
-            <li><span class="pill-check">✓</span> Preview guidance in-chat; full audio via generation pipeline</li>
-            <li><span class="pill-check">✓</span> Safety chains for coach and generation input</li>
-            <li><span class="pill-check">✓</span> Offline-first sync for history and favorites</li>
-          </ul>
-          <div class="status-tag warn">Quota enforcement: currently bypassed in code</div>
-        </div>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Content system</h3>
-            <p>20 curated sessions + 10 ambient tracks with metadata for category, mood, and duration. Search and filter in-app.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> Favorites with personal notes</li>
-              <li><span class="pill-check">✓</span> History, streaks, weekly goals</li>
-              <li><span class="pill-check">✓</span> Background audio mixing</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Access & platforms</h3>
-            <p>Android live with Google Play Billing. iOS billing not implemented; Apple IAP planned but not available yet.</p>
-            <div class="status-tag">Android: live</div>
-            <div class="status-tag warn">iOS: billing not live</div>
-            <p class="subtle" style="margin-top: var(--space-3);">Product IDs differ between client/backend and require alignment for entitlement verification.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pricing" aria-labelledby="pricing-title">
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works" aria-labelledby="how-it-works-heading">
       <div class="container">
         <div class="section-header">
-          <div class="section-eyebrow">Pricing & access</div>
-          <h2 class="section-title" id="pricing-title">Transparent tiers tied to the current build.</h2>
-          <p class="section-subtitle">Android billing is active for Standard. Premium tier is defined in config; upgrade gating is not enforced yet. Use waitlist if you need higher quotas today.</p>
+          <h2 id="how-it-works-heading" class="section-title">How Your AI Coach Helps You Find Calm</h2>
+          <p class="section-subtitle">
+            Need → AI coach → match or generate. Fast path to relief, grounded in the real catalog and generation pipeline.
+          </p>
         </div>
-        <div class="pricing" style="margin-top: var(--space-6);">
-          <div class="card pricing-card">
-            <span class="badge">Standard · Live on Google Play</span>
-            <div class="pricing-price">$1/mo</div>
-            <p class="pricing-meta">$10/yr annual option. Android only.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> AI coach + curated library</li>
-              <li><span class="pill-check">✓</span> History, favorites, offline sync</li>
-              <li><span class="pill-check">✓</span> Generation quotas defined (10/mo up to 10 min) — enforcement currently bypassed</li>
-            </ul>
-            <div class="hero-actions" style="margin-top: var(--space-4);">
-              <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.zenshift.meditation">Get Standard</a>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Express Your Need Conversationally</h3>
+              <p class="step-description">
+                Say what's happening and how much time you have (3–30 minutes). Need-based home chips and chat capture stressor, goal, and duration.
+              </p>
+            </div>
+            <div class="step-visual">
+              <img src="/assets/images/step-1-express-need.png" alt="Chat interface showing user expressing their need to the AI coach" width="200" height="400" loading="lazy">
             </div>
           </div>
-          <div class="card pricing-card">
-            <span class="badge badge-accent">Premium · Defined, not enforced</span>
-            <div class="pricing-price">$5/mo</div>
-            <p class="pricing-meta">$50/yr annual option. Quota enforcement not live.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> Larger generation quota (40/mo up to 30 min) defined in config</li>
-              <li><span class="pill-check">✓</span> Same AI coach and library features</li>
-              <li><span class="pill-check">✓</span> Subscribe via waitlist until gating is enabled</li>
-            </ul>
-            <div class="hero-actions" style="margin-top: var(--space-4);">
-              <a class="btn btn-ghost" href="mailto:zenshift-support@onepingfanventure.com?subject=ZenShift%20Premium%20Waitlist">Join waitlist</a>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-content">
+              <h3 class="step-title">AI Analyzes and Matches</h3>
+              <p class="step-description">
+                Library matcher scores your intent against 20 curated sessions. If confidence is high, you get an instant recommendation. If not, the coach offers custom generation.
+              </p>
             </div>
-            <p class="subtle" style="margin-top: var(--space-3);">iOS billing not implemented. Product IDs differ between app and backend and must be reconciled before entitlement enforcement.</p>
+            <div class="step-visual">
+              <img src="/assets/images/step-2-ai-match.png" alt="AI recommendation interface showing library match or custom generation option" width="200" height="400" loading="lazy">
+            </div>
           </div>
-          <div class="card pricing-card">
-            <span class="badge">Basic</span>
-            <div class="pricing-price">$0</div>
-            <p class="pricing-meta">Explore core experience; generation counts set to zero.</p>
-            <ul class="list-muted">
-              <li><span class="pill-check">✓</span> AI coach conversations</li>
-              <li><span class="pill-check">✓</span> Curated library playback</li>
-              <li><span class="pill-check">✓</span> Upgrade in-app for generation access</li>
-            </ul>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Choose Your Path to Relief</h3>
+              <p class="step-description">
+                Play instantly or approve custom generation. The backend writes the script, synthesizes narration, mixes music, and returns signed URLs—typically within a few minutes.
+              </p>
+            </div>
+            <div class="step-visual">
+              <img src="/assets/images/step-3-meditation-player.png" alt="Meditation player interface ready to play session" width="200" height="400" loading="lazy">
+            </div>
           </div>
+
+          <div class="process-step">
+            <div class="step-number" aria-hidden="true">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Let AI Learn Your Patterns</h3>
+              <p class="step-description">
+                History, favorites, and relief ratings sync with offline-first storage. Streaks and weekly goals keep you consistent while recommendations improve over time.
+              </p>
+            </div>
+            <div class="step-visual">
+              <img src="/assets/images/screenshot-player.png" alt="Session history showing completed sessions and learning" width="200" height="400" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="process-cta">
+          <p class="process-promise">
+            <strong>Who It's For:</strong> Busy professionals, beginners seeking guided structure, experienced meditators looking for variety, anyone wanting to build consistent mindfulness habits.
+          </p>
+          <a href="#download" class="btn btn-primary btn-large">Download ZenShift Today</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tech" aria-labelledby="tech-title">
+    <!-- App Preview Section -->
+    <section class="app-preview-section" id="app-preview" aria-labelledby="app-preview-heading">
       <div class="container">
         <div class="section-header">
-          <div class="section-eyebrow">Architecture & security</div>
-          <h2 class="section-title" id="tech-title">Serverless AWS stack built for fast iteration.</h2>
-          <p class="section-subtitle">Pure AWS CDK, AppSync GraphQL, DynamoDB, S3/CloudFront, Cognito, and SQS for generation jobs. No speculative components.</p>
+          <h2 id="app-preview-heading" class="section-title">Experience ZenShift Meditation Coach</h2>
+          <p class="section-subtitle">
+            Android app built with Expo + React Native. Curated sessions and generated audio stream with dual-track playback and resume support.
+          </p>
         </div>
-        <div class="tech-grid" style="margin-top: var(--space-6);">
-          <div class="tech-tile">
-            <h4>API & Auth</h4>
-            <p>AppSync GraphQL + Cognito (email + Google). Offline queue via Amplify client in-app.</p>
+
+        <div class="app-screenshots">
+          <div class="screenshot-card">
+            <img src="/assets/images/screenshot-home.png" alt="Need-based home screen with context chips and duration selection" width="250" height="500" loading="lazy">
+            <div class="screenshot-caption">
+              <h4>Need-based home</h4>
+              <p>Intent chips and quick play surface 3–10 minute relief without browsing.</p>
+            </div>
           </div>
-          <div class="tech-tile">
-            <h4>AI & Content</h4>
-            <p>Bedrock Nova Micro + LangChain. Catalog matcher, safety chains, and generation worker with OpenAI TTS + music mix.</p>
+
+          <div class="screenshot-card">
+            <img src="/assets/images/screenshot-recommendations.png" alt="AI recommendation engine showing multiple session options with confidence scores" width="250" height="500" loading="lazy">
+            <div class="screenshot-caption">
+              <h4>AI recommendations</h4>
+              <p>Bedrock-powered coach maps your intent to the best catalog pick—or suggests generation.</p>
+            </div>
           </div>
-          <div class="tech-tile">
-            <h4>Data & Storage</h4>
-            <p>DynamoDB tables for conversations/history; S3 for audio assets; CloudFront CDN.</p>
+
+          <div class="screenshot-card">
+            <img src="/assets/images/screenshot-player.png" alt="Smart session player with adaptive audio and real-time feedback" width="250" height="500" loading="lazy">
+            <div class="screenshot-caption">
+              <h4>Custom or curated audio</h4>
+              <p>Stream curated tracks or generated sessions with narration plus ambient music.</p>
+            </div>
           </div>
-          <div class="tech-tile">
-            <h4>Jobs & Monitoring</h4>
-            <p>SQS-backed generation worker; CloudWatch metrics and EMF logs on the worker path.</p>
+
+          <div class="screenshot-card">
+            <img src="/assets/images/screenshot-analytics.png" alt="Analytics dashboard showing usage patterns and effectiveness tracking" width="250" height="500" loading="lazy">
+            <div class="screenshot-caption">
+              <h4>Progress tracking</h4>
+              <p>History, streaks, and relief ratings sync across devices with offline-first storage.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container split">
-        <div class="section-header">
-          <div class="section-eyebrow">About ZenShift</div>
-          <h2 class="section-title" id="about-title">Built for real-world stress, not hype.</h2>
-          <p class="section-subtitle">ZenShift focuses on fast, context-aware relief: conversational coaching, instant library matches, and custom sessions when you need something specific.</p>
-        </div>
-        <div class="card">
-          <h3>Who we serve</h3>
-          <p>Stressed professionals needing 3–10 minute resets, sleep seekers, and beginners who want clear guidance without browsing endless catalogs.</p>
-          <ul class="list-muted">
-            <li><span class="pill-check">✓</span> Quick breaks between meetings</li>
-            <li><span class="pill-check">✓</span> Evening wind-down and sleep support</li>
-            <li><span class="pill-check">✓</span> First-time meditators with simple flows</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
+    <!-- Company Section -->
+    <section class="company-section" id="company" aria-labelledby="company-heading">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow">FAQ</div>
-          <h2 class="section-title" id="faq-title">Straight answers based on the current build.</h2>
-        </div>
-        <div class="faq" style="margin-top: var(--space-6);">
-          <details open>
-            <summary>Is ZenShift available on iOS?</summary>
-            <p>iOS billing is not implemented yet. Android is live on Google Play. You can request iOS updates via the contact CTA.</p>
-          </details>
-          <details>
-            <summary>Can I generate custom sessions today?</summary>
-            <p>Yes. The generation pipeline is live (script → TTS → music mix). Quota checks exist but are currently bypassed in code, so limits are not enforced.</p>
-          </details>
-          <details>
-            <summary>What powers the AI coach?</summary>
-            <p>Amazon Bedrock Nova Micro via LangChain and a conversation state graph. Safety chains and moderation run before and during responses.</p>
-          </details>
-          <details>
-            <summary>How is my data stored?</summary>
-            <p>Auth uses Cognito. Conversation state, history, and favorites sync through AppSync + DynamoDB with offline queueing. Audio is stored in S3 behind signed URLs.</p>
-          </details>
-          <details>
-            <summary>Do you have analytics?</summary>
-            <p>Client-side events are tracked locally; there is no server-side attribution or funnel analytics beyond CloudWatch metrics for backend jobs.</p>
-          </details>
+        <div class="company-content">
+          <div class="company-text">
+            <h2 id="company-heading" class="section-title">About One Ping Fan Venture LLC</h2>
+            <p class="company-description">
+              One Ping Fan Venture LLC builds ZenShift on a fully serverless AWS stack (AppSync, Cognito, DynamoDB, S3/CloudFront, SQS). Bedrock Nova Micro powers the AI coach; a separate generation worker creates narrated audio with background music.
+            </p>
+
+            <div class="company-mission">
+              <h3>Our Mission</h3>
+              <p>Deliver fast, contextual relief for busy people using responsible AI and reliable cloud infrastructure.</p>
+            </div>
+
+            <div class="company-mission">
+              <h3>Our Technology</h3>
+              <p>
+                LangChain + Bedrock for conversations, library matcher for recommendations, and an SQS-backed generation pipeline for custom audio. Offline-aware mobile client built with Expo and Amplify GraphQL.
+              </p>
+            </div>
+
+            <div class="company-contact">
+              <h3>Contact Information</h3>
+              <p>
+                <strong>One Ping Fan Venture LLC</strong><br>
+                United States<br>
+                Email: <a href="mailto:zenshift-support@onepingfanventure.com">zenshift-support@onepingfanventure.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="company-visual">
+            <div class="company-stats">
+              <div class="stat-card">
+                <div class="stat-number">3–30 min</div>
+                <div class="stat-label">Session lengths</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Curated sessions</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Always Available</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-card">
-        <div>
-          <div class="section-eyebrow">Contact</div>
-          <h2 class="section-title" id="contact-title">Reach the ZenShift team.</h2>
-          <p class="section-subtitle">For partnerships, investor diligence, or platform access, reach us directly. No generic forms.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:zenshift-support@onepingfanventure.com?subject=ZenShift%20Inquiry">Email the team</a>
-          <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.zenshift.meditation">Open Google Play</a>
-        </div>
-        <div class="contact-meta">
-          <span class="pill">Support: zenshift-support@onepingfanventure.com</span>
-          <span class="pill">Company: One Ping Fan Venture LLC</span>
+    <!-- Download Section -->
+    <section class="download-section" id="download" aria-labelledby="download-heading">
+      <div class="container">
+        <div class="download-content">
+          <h2 id="download-heading" class="section-title">Download ZenShift Meditation Coach</h2>
+          <p class="section-subtitle">
+            Android app is live with Google Play Billing. Standard is $1/mo ($10/yr). Premium ($5/mo, $50/yr) is defined but quota enforcement isn’t live yet; iOS billing not implemented.
+          </p>
+
+          <div class="app-store-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.zenshift.meditation" class="app-store-badge" aria-label="Get ZenShift Meditation Coach on Google Play">
+              <img src="/assets/app-store-badges/google-play-badge.svg" alt="Get it on Google Play" width="150" height="45">
+            </a>
+            <a href="mailto:zenshift-support@onepingfanventure.com?subject=ZenShift%20iOS%20updates" class="app-store-badge" style="display: inline-flex; align-items: center; padding: 10px 20px; background: #f3f4f6; border-radius: 8px; color: #6b7280;">
+              <span style="font-weight: 600;">iOS - Billing not implemented</span>
+            </a>
+          </div>
+
+          <div class="availability-info">
+            <p>
+              <strong>Available Now:</strong> Android 8.0+ on Google Play (Standard plan live).<br>
+              <strong>Premium:</strong> Defined ($5/mo, $50/yr) but quota gating not enforced yet; waitlist available until IDs are aligned.<br>
+              <strong>iOS:</strong> Billing not implemented; request updates via the contact email.<br>
+              <strong>Privacy:</strong> Auth via Cognito; AppSync + DynamoDB for state; S3 signed URLs for audio. Client-side analytics only; no attribution pipeline.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-content">
         <div class="footer-brand">
-          <div class="logo">
-            <img src="/assets/images/app-icon.png" alt="ZenShift logo">
-            <div>
-              <div>ZenShift</div>
-              <small>AI Meditation Coach</small>
-            </div>
+          <div class="footer-logo">
+            <img src="/assets/images/app-icon.png" alt="ZenShift Meditation Coach" width="24" height="24">
+            <span class="footer-logo-text">ZenShift</span>
           </div>
-          <p class="subtle">AI-assisted meditation with curated audio, custom generation, and serverless AWS backbone.</p>
+          <p class="footer-tagline">Your mindfulness companion for busy lives</p>
         </div>
-        <div class="footer-nav">
-          <h4>Navigate</h4>
-          <ul>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#ai">AI & Personalization</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#tech">Architecture</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/terms.html">Terms of Service</a></li>
-            <li><a href="/delete-account.html">Delete Account</a></li>
-          </ul>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#product">Features</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#download">Download</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#company">About Us</a></li>
+              <li><a href="mailto:zenshift-support@onepingfanventure.com">Contact</a></li>
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="mailto:zenshift-support@onepingfanventure.com">Help Center</a></li>
+              <li><a href="mailto:zenshift-support@onepingfanventure.com">Technical Support</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© 2025 One Ping Fan Venture LLC. All rights reserved.</span>
-        <span>Android live · iOS billing not yet implemented</span>
+        <p class="copyright">
+          © 2025 One Ping Fan Venture LLC. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/delete-account.html">Delete Account</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- External Scripts -->
+  <script src="/assets/js/main.js" defer></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>

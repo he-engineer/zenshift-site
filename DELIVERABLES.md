@@ -9,35 +9,30 @@
 - **Platform status**: Android live; iOS billing not implemented. Evidence: `mobile/services/PurchaseService.ts`, `docs/PRODUCT_OVERVIEW.md`.
 - **Analytics**: Client-side event tracking only; no server-side attribution/cohorts. Evidence: `mobile/services/AnalyticsService.ts`, `docs/PRODUCT_OVERVIEW.md`.
 
-## 2) Proposed IA + wireframe outline
-- **Home**: Hero (app icon + value), proof of Android live, core CTAs (Google Play, contact/waitlist), quick highlights for AI coach/custom generation/offline sync.
-- **Product**: Feature pillars (AI coach, curated library/playback, custom generation, progress/favorites), proof bullets tied to real capabilities, screenshots.
-- **How it works**: 3-step flow (capture need → AI match → play/generate) with timing expectations and guardrails.
-- **Personalization / AI**: Coach model, safety chains, generation vs preview paths, content system (catalog + ambient tracks), offline sync.
-- **Pricing**: Standard (live, Android), Premium (defined, not enforced), Basic (free). Notes on quota bypass and iOS status; waitlist CTA.
-- **Architecture/Tech**: AWS AppSync GraphQL, Cognito, DynamoDB, S3/CloudFront, SQS worker, Bedrock + LangChain, CloudWatch/EMF.
-- **About**: Who we serve, mission for fast relief; team/company reference.
-- **FAQ**: iOS availability, generation quotas (bypassed), AI model, data storage, analytics scope.
-- **Contact/CTA**: Direct email + Google Play link.
+## 2) IA + wireframe outline (original style preserved)
+- **Home**: Hero with app icon, Android-live proof, CTAs to Google Play and iOS updates.
+- **Product features**: AI coach, custom generation pipeline, curated library (20 sessions), progress/favorites/offline sync.
+- **How it works**: Need capture → match → play/generate → sync/learn.
+- **App preview**: Screens for home, AI recommendations, player, analytics.
+- **Company/About**: Mission plus AWS serverless stack + Bedrock details; contact info.
+- **Download & access**: Google Play badge, pricing/status notes (Standard live; Premium defined, not enforced; iOS billing not implemented).
 
 ## 3) Design system (in `assets/css/main.css`)
-- **Fonts**: Headings `Sora`, body `Manrope`.
-- **Colors**: Ink `#0d1224`, ink-muted `#1c2540`, teal CTA `#1fb6a6`/`#0f9d8b`, accent `#7c8cff`, surfaces `#ffffff` / `#f6f8fb`, line `#e2e8f0`.
-- **Spacing & layout**: 4/8-based scale (`--space-2`..`--space-16`), max width `1180px`, radii (`0.5rem`–`1.5rem`), shadows (`soft`/`strong`).
-- **Components**: Buttons (`btn-primary`, `btn-ghost`, `btn-text`), badges/chips/pills, cards, grids, hero meta tiles, pricing cards, FAQ accordions, tech tiles, contact card.
-- **Logo usage**: App icon from `assets/images/app-icon.png` (hash matches `mobile/assets/app-icon.png`) is the primary mark in header/footer/hero.
+- **Fonts**: Inter for headings/body via Google Fonts (original site style).
+- **Colors**: Brand navy/teal palette from original tokens (`--color-deep-navy`, `--color-zen-teal`, etc.) with light surfaces and subtle shadows.
+- **Spacing & layout**: Container max 1200px, section spacing per original CSS; rounded cards and gradients in hero.
+- **Components**: Navbar, hero, feature cards, process steps, screenshot cards, stat cards, download badges retained from original styling.
+- **Logo usage**: App icon from `assets/images/app-icon.png` used in header/footer; shares hash with `mobile/assets/app-icon.png`.
 
 ## 4) Implementation plan (executed)
-1) Define investor-focused IA and copy grounded in product reality; remove speculative claims.  
-2) Apply new design system in `assets/css/main.css` with typography, colors, spacing, and components reusable across pages.  
-3) Rebuild `index.html` with required sections: Home, Product, How It Works, AI/Personalization, Pricing, Architecture, About, FAQ, Contact. Use app icon for brand.  
-4) Keep legal/delete pages untouched; refresh accessibility page logo for consistency.  
-5) Document deliverables and run instructions here.
+1) Restore original visual style; update copy to match current product truth (AI coach, catalog size, generation pipeline, pricing, platform status).  
+2) Keep brand alignment via app icon in header/footer; preserve layout and components.  
+3) Keep legal/delete pages untouched; refresh documentation here.  
 
 ## 5) Code changes (PR-ready)
-- `index.html`: Rewritten with new IA, accurate copy tied to current app capabilities, CTAs, pricing notes, and required sections; uses app icon for brand consistency.
-- `assets/css/main.css`: New design system (typography, color, spacing tokens) and responsive styles for hero, cards, grids, pricing, FAQ, and contact sections.
-- `accessibility.html`: Header/footer logo updated to app icon to match the app brand.
+- `index.html`: Original layout retained; copy updated to reflect real product (20 sessions, AI coach on Bedrock, custom generation pipeline, Android billing live, iOS billing not implemented, pricing notes) and app icon branding.
+- `assets/css/main.css`: Restored original stylesheet to preserve prior visual style.
+- `accessibility.html`: Header/footer logo uses app icon for brand consistency.
 - No changes to `delete-account.html`, `privacy-policy.html`, or `terms.html`.
 
 ## 6) Run instructions
