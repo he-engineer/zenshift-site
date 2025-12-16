@@ -403,9 +403,12 @@ strong {
   text-decoration: none;
 }
 
-.logo img {
+.logo img,
+.logo picture {
   width: 32px;
   height: 32px;
+  border-radius: 8px;
+  display: flex;
 }
 
 .navbar-menu {
@@ -906,13 +909,16 @@ section:nth-child(even) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   margin: var(--spacing-xl) 0;
+  align-items: center;
 }
 
 .app-store-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   transition: transform var(--duration-quick) ease-out;
+  padding: 4px;
 }
 
 .app-store-badge:hover,
@@ -921,8 +927,18 @@ section:nth-child(even) {
 }
 
 .app-store-badge img {
-  height: 45px;
+  height: 53px;
   width: auto;
+  display: block;
+}
+
+.app-store-badge-coming-soon {
+  height: 53px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #6b7280;
+  box-sizing: border-box;
 }
 
 .availability-info {
@@ -976,9 +992,12 @@ section:nth-child(even) {
   margin-bottom: var(--spacing-sm);
 }
 
-.footer-logo img {
+.footer-logo img,
+.footer-logo picture {
   width: 24px;
   height: 24px;
+  border-radius: 6px;
+  display: flex;
 }
 
 .footer-logo-text {
