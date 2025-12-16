@@ -105,6 +105,24 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+
+  /* Background image overlays for meditation photos */
+  --overlay-dark-teal: linear-gradient(135deg,
+    rgba(26, 29, 46, 0.85) 0%,
+    rgba(45, 106, 108, 0.75) 50%,
+    rgba(74, 155, 158, 0.65) 100%);
+
+  --overlay-light: linear-gradient(
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.88) 100%);
+
+  --overlay-medium: linear-gradient(
+    rgba(255, 255, 255, 0.70) 0%,
+    rgba(248, 250, 252, 0.65) 100%);
+
+  --overlay-gradient-depth: linear-gradient(
+    rgba(26, 29, 46, 0.8) 0%,
+    rgba(255, 255, 255, 0.85) 100%);
 }
 
 /* ===========================
@@ -518,6 +536,40 @@ strong {
 }
 
 /* ===========================
+   SECTIONS WITH MEDITATION PHOTO BACKGROUNDS
+   =========================== */
+
+.section-with-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.section-with-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-dark-teal);
+  z-index: 1;
+  transition: opacity var(--duration-smooth) ease-out;
+}
+
+.section-with-photo .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Lazy-loaded background transition */
+.section-with-photo.bg-loaded::before {
+  opacity: 1;
+}
+
+/* ===========================
    HERO SECTION
    =========================== */
 
@@ -529,6 +581,40 @@ strong {
   align-items: center;
   padding: var(--spacing-4xl) 0;
   margin-top: 80px; /* Account for fixed header */
+}
+
+/* Hero background images (mobile-first) */
+.hero {
+  background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.webp');
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.webp');
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.webp');
+  }
+}
+
+/* PNG fallback for browsers without WebP support */
+.no-webp .hero {
+  background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.png') !important;
+}
+
+@media (min-width: 768px) {
+  .no-webp .hero {
+    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.png') !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .no-webp .hero {
+    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.png') !important;
+  }
 }
 
 .hero-content {
@@ -888,12 +974,48 @@ section:nth-child(even) {
 }
 
 /* ===========================
+   PRODUCT SECTION BACKGROUNDS
+   =========================== */
+
+#product::before {
+  background: var(--overlay-light);
+}
+
+/* ===========================
+   HOW IT WORKS SECTION BACKGROUNDS
+   =========================== */
+
+#how-it-works::before {
+  background: var(--overlay-medium);
+}
+
+/* ===========================
+   APP PREVIEW SECTION BACKGROUNDS
+   =========================== */
+
+#app-preview::before {
+  background: var(--overlay-light);
+}
+
+/* ===========================
+   COMPANY SECTION BACKGROUNDS
+   =========================== */
+
+#company::before {
+  background: var(--overlay-gradient-depth);
+}
+
+/* ===========================
    DOWNLOAD SECTION
    =========================== */
 
 .download-section {
   background: var(--color-zen-teal-gradient);
   color: var(--color-white-text);
+}
+
+.download-section::before {
+  background: var(--overlay-dark-teal);
 }
 
 .download-section .section-title,
