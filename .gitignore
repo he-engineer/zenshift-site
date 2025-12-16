@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build/Temp
+dist/
+build/

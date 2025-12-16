@@ -81,6 +81,17 @@
   }
 
   /**
+   * Check if browser supports WebP
+   */
+  function supportsWebP() {
+    const elem = document.createElement('canvas');
+    if (elem.getContext && elem.getContext('2d')) {
+      return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    }
+    return false;
+  }
+
+  /**
    * Check if user prefers reduced motion
    */
   function prefersReducedMotion() {
@@ -385,6 +396,60 @@
   }
 
   // ===========================
+  // LAZY LOADING BACKGROUND IMAGES
+  // ===========================
+
+  class LazyBackgroundLoader {
+    constructor() {
+      this.sections = document.querySelectorAll('[data-bg-image]');
+      this.observer = null;
+
+      this.init();
+    }
+
+    init() {
+      if (!('IntersectionObserver' in window)) {
+        // Fallback for browsers without IntersectionObserver
+        this.loadAllBackgrounds();
+        return;
+      }
+
+      this.observer = new IntersectionObserver(
+        this.handleIntersection.bind(this),
+        {
+          threshold: 0.1,
+          rootMargin: '200px'
+        }
+      );
+
+      this.sections.forEach(section => {
+        this.observer.observe(section);
+      });
+    }
+
+    handleIntersection(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.loadBackground(entry.target);
+          this.observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    loadBackground(section) {
+      const bgImage = section.getAttribute('data-bg-image');
+      if (bgImage) {
+        section.style.backgroundImage = `url('${bgImage}')`;
+        section.classList.add('bg-loaded');
+      }
+    }
+
+    loadAllBackgrounds() {
+      this.sections.forEach(section => this.loadBackground(section));
+    }
+  }
+
+  // ===========================
   // CTA TRACKING
   // ===========================
 
@@ -682,11 +747,19 @@
 
   function initializeComponents() {
     try {
+      // Detect WebP support and set class on HTML element
+      if (supportsWebP()) {
+        document.documentElement.classList.add('webp');
+      } else {
+        document.documentElement.classList.add('no-webp');
+      }
+
       // Initialize all components
       new MobileNavigation();
       new SmoothScrolling();
       new SectionObserver();
       new LazyImageLoader();
+      new LazyBackgroundLoader();
       new CTATracker();
       new PerformanceMonitor();
       new HeaderScrollBehavior();
@@ -697,7 +770,8 @@
         timestamp: Date.now(),
         user_agent: navigator.userAgent,
         viewport_width: getViewportWidth(),
-        prefers_reduced_motion: prefersReducedMotion()
+        prefers_reduced_motion: prefersReducedMotion(),
+        webp_support: supportsWebP()
       });
 
     } catch (error) {

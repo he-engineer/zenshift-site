@@ -71,6 +71,11 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
+  <!-- Preload hero background images for performance -->
+  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.webp" type="image/webp" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1023px)">
+  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.webp" type="image/webp" media="(min-width: 1024px)">
+
   <!-- Critical CSS (inlined for performance) -->
   <style>
     /* Critical above-the-fold styles */
@@ -177,7 +182,7 @@
   <main id="main-content" role="main">
 
     <!-- Hero Section -->
-    <section class="hero" id="hero" aria-labelledby="hero-heading">
+    <section class="hero section-with-photo" id="hero" aria-labelledby="hero-heading">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
@@ -215,7 +220,7 @@
     </section>
 
     <!-- Product Features Section -->
-    <section class="product-section" id="product" aria-labelledby="product-heading">
+    <section class="product-section section-with-photo" id="product" aria-labelledby="product-heading" data-bg-image="/assets/images/meditation-photos/optimized/3_still_lake_reflection/mobile.webp">
       <div class="container">
         <div class="section-header">
           <h2 id="product-heading" class="section-title">ZenShift Features</h2>
@@ -282,7 +287,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works-section" id="how-it-works" aria-labelledby="how-it-works-heading">
+    <section class="how-it-works-section section-with-photo" id="how-it-works" aria-labelledby="how-it-works-heading" data-bg-image="/assets/images/meditation-photos/optimized/1_forest_morning_mist/mobile.webp">
       <div class="container">
         <div class="section-header">
           <h2 id="how-it-works-heading" class="section-title">How Your AI Coach Helps You Find Calm</h2>
@@ -355,7 +360,7 @@
     </section>
 
     <!-- App Preview Section -->
-    <section class="app-preview-section" id="app-preview" aria-labelledby="app-preview-heading">
+    <section class="app-preview-section section-with-photo" id="app-preview" aria-labelledby="app-preview-heading" data-bg-image="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/mobile.webp">
       <div class="container">
         <div class="section-header">
           <h2 id="app-preview-heading" class="section-title">Experience ZenShift Meditation Coach</h2>
@@ -401,7 +406,7 @@
     </section>
 
     <!-- Company Section -->
-    <section class="company-section" id="company" aria-labelledby="company-heading">
+    <section class="company-section section-with-photo" id="company" aria-labelledby="company-heading" data-bg-image="/assets/images/meditation-photos/optimized/6_cloudy_mountains/mobile.webp">
       <div class="container">
         <div class="company-content">
           <div class="company-text">
@@ -453,7 +458,7 @@
     </section>
 
     <!-- Download Section -->
-    <section class="download-section" id="download" aria-labelledby="download-heading">
+    <section class="download-section section-with-photo" id="download" aria-labelledby="download-heading" data-bg-image="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/mobile.webp">
       <div class="container">
         <div class="download-content">
           <h2 id="download-heading" class="section-title">Download ZenShift Meditation Coach</h2>
