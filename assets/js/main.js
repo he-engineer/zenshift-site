@@ -425,6 +425,19 @@
       this.sections.forEach(section => {
         this.observer.observe(section);
       });
+
+      // Handle window resize to reload appropriate images
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          this.sections.forEach(section => {
+            if (section.classList.contains('bg-loaded')) {
+              this.loadBackground(section);
+            }
+          });
+        }, 250);
+      });
     }
 
     handleIntersection(entries) {
@@ -437,11 +450,33 @@
     }
 
     loadBackground(section) {
-      const bgImage = section.getAttribute('data-bg-image');
-      if (bgImage) {
-        section.style.backgroundImage = `url('${bgImage}')`;
-        section.classList.add('bg-loaded');
+      const mobileImage = section.getAttribute('data-bg-image');
+      if (!mobileImage) return;
+
+      // Extract base path (remove /mobile.webp)
+      const basePath = mobileImage.replace('/mobile.webp', '');
+
+      // Detect viewport width
+      const viewportWidth = window.innerWidth;
+
+      // Select appropriate image size
+      let imagePath;
+      if (viewportWidth >= 1024) {
+        imagePath = `${basePath}/desktop.webp`;
+      } else if (viewportWidth >= 768) {
+        imagePath = `${basePath}/tablet.webp`;
+      } else {
+        imagePath = `${basePath}/mobile.webp`;
       }
+
+      // Check if browser supports WebP
+      const supportsWebP = document.documentElement.classList.contains('webp');
+      if (!supportsWebP) {
+        imagePath = imagePath.replace('.webp', '.png');
+      }
+
+      section.style.backgroundImage = `url('${imagePath}')`;
+      section.classList.add('bg-loaded');
     }
 
     loadAllBackgrounds() {

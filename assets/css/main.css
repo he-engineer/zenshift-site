@@ -541,7 +541,7 @@ strong {
 
 .section-with-photo {
   position: relative;
-  background-size: cover;
+  background-size: 110%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
