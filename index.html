@@ -71,10 +71,6 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <!-- Preload hero background images for performance -->
-  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.webp" type="image/webp" media="(max-width: 767px)">
-  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.webp" type="image/webp" media="(min-width: 768px) and (max-width: 1023px)">
-  <link rel="preload" as="image" href="/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.webp" type="image/webp" media="(min-width: 1024px)">
 
   <!-- Critical CSS (inlined for performance) -->
   <style>
@@ -182,7 +178,7 @@
   <main id="main-content" role="main">
 
     <!-- Hero Section -->
-    <section class="hero section-with-photo" id="hero" aria-labelledby="hero-heading">
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
@@ -220,7 +216,7 @@
     </section>
 
     <!-- Product Features Section -->
-    <section class="product-section section-with-photo" id="product" aria-labelledby="product-heading" data-bg-image="/assets/images/meditation-photos/optimized/3_still_lake_reflection/mobile.webp">
+    <section class="product-section" id="product" aria-labelledby="product-heading">
       <div class="container">
         <div class="section-header">
           <h2 id="product-heading" class="section-title">ZenShift Features</h2>
@@ -231,63 +227,122 @@
 
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M8 16c0-2.2 1.8-4 4-4h24c2.2 0 4 1.8 4 4v16c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4V16z" stroke="#2D6A6C" stroke-width="2"/>
-                <path d="M16 22h16M16 26h12M16 30h8" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="feature-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/1_forest_morning_mist/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/1_forest_morning_mist/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/1_forest_morning_mist/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/1_forest_morning_mist/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/1_forest_morning_mist/mobile.png"
+                     alt="Peaceful forest scene with morning mist representing calm, thoughtful conversation"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
-            <h3 class="feature-title">AI Coach Conversations</h3>
-            <p class="feature-description">
-              Have a real conversation with your meditation coach. Describe what you need, and our AI understands your situation—then recommends the perfect library session or offers to create a custom one tailored just for you. Every interaction helps us understand you better.
-            </p>
+            <div class="feature-content">
+              <h3 class="feature-title">AI Coach Conversations</h3>
+              <p class="feature-description">
+                Have a real conversation with your meditation coach. Describe what you need, and our AI understands your situation—then recommends the perfect library session or offers to create a custom one tailored just for you. Every interaction helps us understand you better.
+              </p>
+            </div>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="24" cy="24" r="20" stroke="#2D6A6C" stroke-width="2"/>
-                <path d="M24 16v8l6 4" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="feature-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.png"
+                     alt="Mountain sunrise representing new beginnings and personalized experiences"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
-            <h3 class="feature-title">Custom Session Generation</h3>
-            <p class="feature-description">
-              Can't find exactly what you need? Our AI creates a fully personalized meditation session just for you—complete with soothing narration that includes your name and calming music, all tailored to your exact situation. Whether you're dealing with pre-presentation anxiety, post-workout recovery, or relationship stress, the AI understands your needs and creates something uniquely yours in just 2-3 minutes.
-            </p>
+            <div class="feature-content">
+              <h3 class="feature-title">Custom Session Generation</h3>
+              <p class="feature-description">
+                Can't find exactly what you need? Our AI creates a fully personalized meditation session just for you—complete with soothing narration that includes your name and calming music, all tailored to your exact situation. Whether you're dealing with pre-presentation anxiety, post-workout recovery, or relationship stress, the AI understands your needs and creates something uniquely yours in just 2-3 minutes.
+              </p>
+            </div>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M24 4L32 16H16L24 4Z" stroke="#2D6A6C" stroke-width="2"/>
-                <circle cx="24" cy="28" r="8" stroke="#2D6A6C" stroke-width="2"/>
-              </svg>
+            <div class="feature-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/3_still_lake_reflection/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/3_still_lake_reflection/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/3_still_lake_reflection/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/3_still_lake_reflection/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/3_still_lake_reflection/mobile.png"
+                     alt="Still lake reflection symbolizing perfect matching and clarity"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
-            <h3 class="feature-title">Smart Library Matching</h3>
-            <p class="feature-description">
-              Browse or discover from our library of 20 curated sessions across 10 categories (Focus, Stress, Sleep, Energy, and more). AI recommends the best match for your mood and available time.
-            </p>
+            <div class="feature-content">
+              <h3 class="feature-title">Smart Library Matching</h3>
+              <p class="feature-description">
+                Browse or discover from our library of 20 curated sessions across 10 categories (Focus, Stress, Sleep, Energy, and more). AI recommends the best match for your mood and available time.
+              </p>
+            </div>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="6" y="6" width="36" height="24" rx="4" stroke="#2D6A6C" stroke-width="2"/>
-                <circle cx="18" cy="18" r="4" stroke="#2D6A6C" stroke-width="2"/>
-                <path d="M30 14l8 8M30 22l8-8" stroke="#2D6A6C" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="feature-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/mobile.png"
+                     alt="Ocean horizon at dusk representing ongoing journey and growth"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
-            <h3 class="feature-title">Progress Tracking & Learning</h3>
-            <p class="feature-description">
-              Your session history and completion patterns help the AI improve its recommendations over time. Track your progress with streaks, milestones, and weekly goals. Mark favorites for quick replay across all your devices—history and favorites sync seamlessly via the cloud. Build consistent meditation habits with insights that matter.
-            </p>
+            <div class="feature-content">
+              <h3 class="feature-title">Progress Tracking & Learning</h3>
+              <p class="feature-description">
+                Your session history and completion patterns help the AI improve its recommendations over time. Track your progress with streaks, milestones, and weekly goals. Mark favorites for quick replay across all your devices—history and favorites sync seamlessly via the cloud. Build consistent meditation habits with insights that matter.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works-section section-with-photo" id="how-it-works" aria-labelledby="how-it-works-heading" data-bg-image="/assets/images/meditation-photos/optimized/1_forest_morning_mist/mobile.webp">
+    <section class="how-it-works-section" id="how-it-works" aria-labelledby="how-it-works-heading">
       <div class="container">
         <div class="section-header">
           <h2 id="how-it-works-heading" class="section-title">How Your AI Coach Helps You Find Calm</h2>
@@ -306,7 +361,23 @@
               </p>
             </div>
             <div class="step-visual">
-              <img src="/assets/images/step-1-express-need.png" alt="Chat interface showing user expressing their need to the AI coach" width="200" height="400" loading="lazy">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/6_cloudy_mountains/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/6_cloudy_mountains/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/6_cloudy_mountains/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/6_cloudy_mountains/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/6_cloudy_mountains/mobile.png"
+                     alt="Cloudy mountain landscape"
+                     width="300"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
           </div>
 
@@ -319,7 +390,23 @@
               </p>
             </div>
             <div class="step-visual">
-              <img src="/assets/images/step-2-ai-match.png" alt="AI recommendation interface showing library match or custom generation option" width="200" height="400" loading="lazy">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/12_starry_night_sky/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/12_starry_night_sky/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/12_starry_night_sky/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/12_starry_night_sky/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/12_starry_night_sky/mobile.png"
+                     alt="Starry night sky representing wisdom and clarity"
+                     width="300"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
           </div>
 
@@ -332,7 +419,23 @@
               </p>
             </div>
             <div class="step-visual">
-              <img src="/assets/images/step-3-meditation-player.png" alt="Meditation player interface ready to play session" width="200" height="400" loading="lazy">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/11_tropical_beach/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/11_tropical_beach/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/11_tropical_beach/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/11_tropical_beach/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/11_tropical_beach/mobile.png"
+                     alt="Tropical beach representing relief and calm"
+                     width="300"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
           </div>
 
@@ -345,7 +448,23 @@
               </p>
             </div>
             <div class="step-visual">
-              <img src="/assets/images/screenshot-player.png" alt="Session history showing completed sessions and learning" width="200" height="400" loading="lazy">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/19_bamboo_forest/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/19_bamboo_forest/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/19_bamboo_forest/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/19_bamboo_forest/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/19_bamboo_forest/mobile.png"
+                     alt="Bamboo forest representing growth and learning"
+                     width="300"
+                     height="300"
+                     loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
@@ -360,7 +479,7 @@
     </section>
 
     <!-- App Preview Section -->
-    <section class="app-preview-section section-with-photo" id="app-preview" aria-labelledby="app-preview-heading" data-bg-image="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/mobile.webp">
+    <section class="app-preview-section" id="app-preview" aria-labelledby="app-preview-heading">
       <div class="container">
         <div class="section-header">
           <h2 id="app-preview-heading" class="section-title">Experience ZenShift Meditation Coach</h2>
@@ -371,7 +490,25 @@
 
         <div class="app-screenshots">
           <div class="screenshot-card">
-            <img src="/assets/images/screenshot-home.png" alt="Need-based home screen with context chips and duration selection" width="250" height="500" loading="lazy">
+            <div class="screenshot-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/5_river_quiet_valley/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/5_river_quiet_valley/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/5_river_quiet_valley/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/5_river_quiet_valley/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/5_river_quiet_valley/mobile.png"
+                     alt="Quiet river flowing through a peaceful valley"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
+            </div>
             <div class="screenshot-caption">
               <h4>Intuitive Home Screen</h4>
               <p>Beautiful single-screen interface with quick access to guided sessions from 2 to 10 minutes.</p>
@@ -379,7 +516,25 @@
           </div>
 
           <div class="screenshot-card">
-            <img src="/assets/images/screenshot-recommendations.png" alt="AI recommendation engine showing multiple session options with confidence scores" width="250" height="500" loading="lazy">
+            <div class="screenshot-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/7_meadow_soft_afternoon/mobile.png"
+                     alt="Peaceful meadow in soft afternoon light"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
+            </div>
             <div class="screenshot-caption">
               <h4>Dynamic Recommendations</h4>
               <p>Personalized recommendations based on your mood, available time, and usage patterns.</p>
@@ -387,7 +542,25 @@
           </div>
 
           <div class="screenshot-card">
-            <img src="/assets/images/screenshot-player.png" alt="Smart session player with adaptive audio and real-time feedback" width="250" height="500" loading="lazy">
+            <div class="screenshot-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/8_snowy_landscape_blue_hour/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/8_snowy_landscape_blue_hour/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/8_snowy_landscape_blue_hour/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/8_snowy_landscape_blue_hour/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/8_snowy_landscape_blue_hour/mobile.png"
+                     alt="Serene snowy landscape during blue hour"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
+            </div>
             <div class="screenshot-caption">
               <h4>Premium Audio Experience</h4>
               <p>Soothing narration with carefully selected background music optimized for seamless playback.</p>
@@ -395,7 +568,25 @@
           </div>
 
           <div class="screenshot-card">
-            <img src="/assets/images/screenshot-analytics.png" alt="Analytics dashboard showing usage patterns and effectiveness tracking" width="250" height="500" loading="lazy">
+            <div class="screenshot-image">
+              <picture>
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/9_desert_sunset/desktop.webp"
+                        type="image/webp">
+                <source media="(min-width: 768px)"
+                        srcset="/assets/images/meditation-photos/optimized/9_desert_sunset/desktop.png"
+                        type="image/png">
+                <source srcset="/assets/images/meditation-photos/optimized/9_desert_sunset/mobile.webp"
+                        type="image/webp">
+                <source srcset="/assets/images/meditation-photos/optimized/9_desert_sunset/mobile.png"
+                        type="image/png">
+                <img src="/assets/images/meditation-photos/optimized/9_desert_sunset/mobile.png"
+                     alt="Desert landscape at sunset"
+                     width="400"
+                     height="300"
+                     loading="lazy">
+              </picture>
+            </div>
             <div class="screenshot-caption">
               <h4>Progress Tracking</h4>
               <p>Session history, weekly stats, visual progress indicators and achievement milestones.</p>
@@ -406,7 +597,7 @@
     </section>
 
     <!-- Company Section -->
-    <section class="company-section section-with-photo" id="company" aria-labelledby="company-heading" data-bg-image="/assets/images/meditation-photos/optimized/6_cloudy_mountains/mobile.webp">
+    <section class="company-section" id="company" aria-labelledby="company-heading">
       <div class="container">
         <div class="company-content">
           <div class="company-text">
@@ -458,7 +649,7 @@
     </section>
 
     <!-- Download Section -->
-    <section class="download-section section-with-photo" id="download" aria-labelledby="download-heading" data-bg-image="/assets/images/meditation-photos/optimized/4_ocean_horizon_at_dusk/mobile.webp">
+    <section class="download-section" id="download" aria-labelledby="download-heading">
       <div class="container">
         <div class="download-content">
           <h2 id="download-heading" class="section-title">Download ZenShift Meditation Coach</h2>
