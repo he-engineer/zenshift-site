@@ -771,9 +771,23 @@ section:nth-child(even) {
   line-height: var(--line-height-body);
 }
 
+.step-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-visual picture {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
 .step-visual img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--radius-medium);
   box-shadow: var(--shadow-medium);
 }
