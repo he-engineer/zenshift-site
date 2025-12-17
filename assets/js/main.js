@@ -399,90 +399,6 @@
   // LAZY LOADING BACKGROUND IMAGES
   // ===========================
 
-  class LazyBackgroundLoader {
-    constructor() {
-      this.sections = document.querySelectorAll('[data-bg-image]');
-      this.observer = null;
-
-      this.init();
-    }
-
-    init() {
-      if (!('IntersectionObserver' in window)) {
-        // Fallback for browsers without IntersectionObserver
-        this.loadAllBackgrounds();
-        return;
-      }
-
-      this.observer = new IntersectionObserver(
-        this.handleIntersection.bind(this),
-        {
-          threshold: 0.1,
-          rootMargin: '200px'
-        }
-      );
-
-      this.sections.forEach(section => {
-        this.observer.observe(section);
-      });
-
-      // Handle window resize to reload appropriate images
-      let resizeTimeout;
-      window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          this.sections.forEach(section => {
-            if (section.classList.contains('bg-loaded')) {
-              this.loadBackground(section);
-            }
-          });
-        }, 250);
-      });
-    }
-
-    handleIntersection(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.loadBackground(entry.target);
-          this.observer.unobserve(entry.target);
-        }
-      });
-    }
-
-    loadBackground(section) {
-      const mobileImage = section.getAttribute('data-bg-image');
-      if (!mobileImage) return;
-
-      // Extract base path (remove /mobile.webp)
-      const basePath = mobileImage.replace('/mobile.webp', '');
-
-      // Detect viewport width
-      const viewportWidth = window.innerWidth;
-
-      // Select appropriate image size
-      let imagePath;
-      if (viewportWidth >= 1024) {
-        imagePath = `${basePath}/desktop.webp`;
-      } else if (viewportWidth >= 768) {
-        imagePath = `${basePath}/tablet.webp`;
-      } else {
-        imagePath = `${basePath}/mobile.webp`;
-      }
-
-      // Check if browser supports WebP
-      const supportsWebP = document.documentElement.classList.contains('webp');
-      if (!supportsWebP) {
-        imagePath = imagePath.replace('.webp', '.png');
-      }
-
-      section.style.backgroundImage = `url('${imagePath}')`;
-      section.classList.add('bg-loaded');
-    }
-
-    loadAllBackgrounds() {
-      this.sections.forEach(section => this.loadBackground(section));
-    }
-  }
 
   // ===========================
   // CTA TRACKING
@@ -794,7 +710,6 @@
       new SmoothScrolling();
       new SectionObserver();
       new LazyImageLoader();
-      new LazyBackgroundLoader();
       new CTATracker();
       new PerformanceMonitor();
       new HeaderScrollBehavior();

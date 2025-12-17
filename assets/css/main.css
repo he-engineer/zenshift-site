@@ -539,35 +539,6 @@ strong {
    SECTIONS WITH MEDITATION PHOTO BACKGROUNDS
    =========================== */
 
-.section-with-photo {
-  position: relative;
-  background-size: 110%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-.section-with-photo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--overlay-dark-teal);
-  z-index: 1;
-  transition: opacity var(--duration-smooth) ease-out;
-}
-
-.section-with-photo .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Lazy-loaded background transition */
-.section-with-photo.bg-loaded::before {
-  opacity: 1;
-}
 
 /* ===========================
    HERO SECTION
@@ -583,39 +554,6 @@ strong {
   margin-top: 80px; /* Account for fixed header */
 }
 
-/* Hero background images (mobile-first) */
-.hero {
-  background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.webp');
-}
-
-@media (min-width: 768px) {
-  .hero {
-    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.webp');
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.webp');
-  }
-}
-
-/* PNG fallback for browsers without WebP support */
-.no-webp .hero {
-  background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/mobile.png') !important;
-}
-
-@media (min-width: 768px) {
-  .no-webp .hero {
-    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/tablet.png') !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .no-webp .hero {
-    background-image: url('/assets/images/meditation-photos/optimized/2_mountain_sunrise/desktop.png') !important;
-  }
-}
 
 .hero-content {
   display: grid;
@@ -721,22 +659,44 @@ section:nth-child(even) {
 
 .feature-card {
   background: var(--color-white);
-  padding: var(--spacing-xl);
   border-radius: var(--radius-large);
-  text-align: center;
+  overflow: hidden;
   box-shadow: var(--shadow-subtle);
   transition: all var(--duration-smooth) ease-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card:hover {
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+  transform: translateY(-4px);
 }
 
-.feature-icon {
-  margin-bottom: var(--spacing-lg);
+.feature-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-smooth) ease-out;
+}
+
+.feature-card:hover .feature-image img {
+  transform: scale(1.05);
+}
+
+.feature-content {
+  padding: var(--spacing-xl);
+  flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .feature-title {
@@ -748,6 +708,20 @@ section:nth-child(even) {
 .feature-description {
   color: var(--color-secondary-text);
   line-height: var(--line-height-body);
+  flex: 1;
+}
+
+/* Responsive adjustments for feature image height */
+@media (min-width: 768px) {
+  .feature-image {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-image {
+    height: 220px;
+  }
 }
 
 /* ===========================
@@ -973,37 +947,6 @@ section:nth-child(even) {
   }
 }
 
-/* ===========================
-   PRODUCT SECTION BACKGROUNDS
-   =========================== */
-
-#product::before {
-  background: var(--overlay-light);
-}
-
-/* ===========================
-   HOW IT WORKS SECTION BACKGROUNDS
-   =========================== */
-
-#how-it-works::before {
-  background: var(--overlay-medium);
-}
-
-/* ===========================
-   APP PREVIEW SECTION BACKGROUNDS
-   =========================== */
-
-#app-preview::before {
-  background: var(--overlay-light);
-}
-
-/* ===========================
-   COMPANY SECTION BACKGROUNDS
-   =========================== */
-
-#company::before {
-  background: var(--overlay-gradient-depth);
-}
 
 /* ===========================
    DOWNLOAD SECTION
@@ -1012,10 +955,6 @@ section:nth-child(even) {
 .download-section {
   background: var(--color-zen-teal-gradient);
   color: var(--color-white-text);
-}
-
-.download-section::before {
-  background: var(--overlay-dark-teal);
 }
 
 .download-section .section-title,
