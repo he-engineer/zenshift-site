@@ -1,9 +1,9 @@
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
+import sharp from 'sharp';
+import fs from 'node:fs';
+import path from 'node:path';
 
-const INPUT_DIR = './assets/images/meditation-photos';
-const OUTPUT_DIR = './assets/images/meditation-photos/optimized';
+const INPUT_DIR = './public/assets/images/meditation-photos';
+const OUTPUT_DIR = './public/assets/images/meditation-photos/optimized';
 
 const SIZES = {
   mobile: 640,
