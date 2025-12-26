@@ -83,7 +83,6 @@ export default function HowItWorks() {
                       position: 'relative',
                       width: 140,
                       aspectRatio: '9 / 19.5',
-                      borderRadius: 2,
                       overflow: 'hidden',
                       boxShadow: '0 10px 30px -5px rgba(0, 0, 0, 0.3)',
                     }}
