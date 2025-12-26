@@ -12,12 +12,14 @@ interface AppStoreButtonsProps {
 }
 
 export default function AppStoreButtons({ size = 'normal', showComingSoon = false }: AppStoreButtonsProps) {
-  // Badge dimensions per brand guidelines:
+  // Badge dimensions per official brand guidelines:
   // - Minimum height: 40px for onscreen display
-  // - Official SVG badges maintain intrinsic aspect ratios
-  // - Google Play badge standard: 135x40 (3.375:1)
-  // - App Store badge standard: 120x40 (3:1)
-  const badgeHeight = size === 'large' ? 54 : 45;
+  // - Clear space: 1/4 of badge height around all sides
+  // - Google Play official badge: 646x250 (2.584:1 ratio)
+  // - App Store official badge: 119.66x40 (2.99:1 ratio)
+  const badgeHeight = size === 'large' ? 50 : 40;
+  const googlePlayWidth = Math.round(badgeHeight * 2.584);
+  const appStoreWidth = Math.round(badgeHeight * 2.99);
 
   return (
     <Stack
@@ -25,14 +27,14 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
       spacing={2}
       alignItems="center"
     >
-      {/* Google Play Badge */}
+      {/* Google Play Badge - Official */}
       <Link
         href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Get it on Google Play"
         style={{
           display: 'block',
-          height: badgeHeight,
           transition: 'opacity 0.2s ease',
         }}
         onMouseEnter={(e) => {
@@ -43,57 +45,32 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         }}
       >
         <Image
-          src="/images/app-store-badges/google-play-badge-official.svg"
+          src="/images/app-store-badges/google-play-badge-en.png"
           alt="Get it on Google Play"
-          width={Math.round(badgeHeight * 3.375)}
+          width={googlePlayWidth}
           height={badgeHeight}
           style={{ display: 'block', height: badgeHeight, width: 'auto' }}
           priority
         />
       </Link>
 
-      {/* App Store Badge or Coming Soon */}
-      {showComingSoon ? (
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: badgeHeight,
-            px: 3,
-            bgcolor: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: 1,
-          }}
-        >
-          <Typography
-            sx={{
-              color: colors.textTertiary,
-              fontWeight: 600,
-              fontSize: size === 'large' ? '0.9375rem' : '0.8125rem',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            iOS - Coming Soon
-          </Typography>
-        </Box>
-      ) : (
-        <Box
-          style={{
-            display: 'block',
-            height: badgeHeight,
-            opacity: 0.4,
-            cursor: 'not-allowed',
-          }}
-        >
-          <Image
-            src="/images/app-store-badges/app-store-badge-official.svg"
-            alt="Download on the App Store - Coming Soon"
-            width={Math.round(badgeHeight * 3)}
-            height={badgeHeight}
-            style={{ display: 'block', height: badgeHeight, width: 'auto' }}
-          />
-        </Box>
-      )}
+      {/* App Store Badge - Official (Black, per guidelines for multiple badges) */}
+      <Box
+        sx={{
+          opacity: 0.4,
+          cursor: 'not-allowed',
+          position: 'relative',
+        }}
+        title="iOS - Coming Soon"
+      >
+        <Image
+          src="/images/app-store-badges/app-store-badge-black-en.svg"
+          alt="Download on the App Store - Coming Soon"
+          width={appStoreWidth}
+          height={badgeHeight}
+          style={{ display: 'block', height: badgeHeight, width: 'auto' }}
+        />
+      </Box>
     </Stack>
   );
 }

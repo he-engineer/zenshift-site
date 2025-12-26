@@ -158,6 +158,7 @@ export default function Footer() {
                 href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Get it on Google Play"
                 sx={{
                   display: 'block',
                   transition: 'opacity 0.2s ease',
@@ -165,16 +166,16 @@ export default function Footer() {
                 }}
               >
                 <Image
-                  src="/images/app-store-badges/google-play-badge-official.svg"
+                  src="/images/app-store-badges/google-play-badge-en.png"
                   alt="Get it on Google Play"
-                  width={135}
+                  width={103}
                   height={40}
                   style={{ display: 'block', height: '40px', width: 'auto' }}
                 />
               </MuiLink>
-              <Box sx={{ opacity: 0.4 }}>
+              <Box sx={{ opacity: 0.4 }} title="iOS - Coming Soon">
                 <Image
-                  src="/images/app-store-badges/app-store-badge-official.svg"
+                  src="/images/app-store-badges/app-store-badge-black-en.svg"
                   alt="Download on the App Store - Coming Soon"
                   width={120}
                   height={40}
