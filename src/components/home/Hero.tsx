@@ -197,6 +197,7 @@ export default function Hero() {
                   position: 'relative',
                   width: { xs: 280, sm: 320 },
                   aspectRatio: '9 / 19.5',
+                  borderRadius: 3,
                   overflow: 'hidden',
                   boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                 }}

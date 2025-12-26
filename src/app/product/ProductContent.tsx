@@ -222,6 +222,7 @@ export default function ProductContent() {
                         position: 'relative',
                         width: { xs: 220, md: 260 },
                         aspectRatio: '9 / 19.5',
+                        borderRadius: 3,
                         overflow: 'hidden',
                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
                       }}

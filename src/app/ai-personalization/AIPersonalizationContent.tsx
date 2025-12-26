@@ -137,6 +137,7 @@ export default function AIPersonalizationContent() {
                     position: 'relative',
                     width: { xs: 240, md: 280 },
                     aspectRatio: '9 / 19.5',
+                    borderRadius: 3,
                     overflow: 'hidden',
                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                   }}
@@ -278,6 +279,7 @@ export default function AIPersonalizationContent() {
                     position: 'relative',
                     width: { xs: 240, md: 280 },
                     aspectRatio: '9 / 19.5',
+                    borderRadius: 3,
                     overflow: 'hidden',
                     boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.2)',
                   }}

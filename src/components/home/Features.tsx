@@ -106,6 +106,7 @@ export default function Features() {
                       right: 16,
                       width: 80,
                       aspectRatio: '9 / 19.5',
+                      borderRadius: 1.5,
                       overflow: 'hidden',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
                     }}
