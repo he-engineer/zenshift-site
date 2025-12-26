@@ -18,10 +18,9 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
   // - Google Play must be same size or LARGER than other badges
   // - Google Play official badge: 646x250 (2.584:1 ratio)
   // - App Store official badge: 119.66x40 (2.99:1 ratio)
-  // Both badges use same height to comply with Google Play requirement
-  const badgeHeight = size === 'large' ? 50 : 40;
-  const googlePlayWidth = Math.round(badgeHeight * 2.584);
-  const appStoreWidth = Math.round(badgeHeight * 2.99);
+  // Google Play badge is set LARGER to ensure compliance
+  const googlePlayHeight = size === 'large' ? 50 : 40;
+  const appStoreHeight = size === 'large' ? 45 : 36; // Smaller than Google Play per guidelines
 
   return (
     <Stack
@@ -29,7 +28,7 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
       spacing={2}
       alignItems="center"
     >
-      {/* Google Play Badge - Official */}
+      {/* Google Play Badge - Official (must be same size or LARGER than App Store) */}
       <Link
         href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
         target="_blank"
@@ -49,14 +48,15 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         <Image
           src="/images/app-store-badges/google-play-badge-en.png"
           alt="Get it on Google Play"
-          width={googlePlayWidth}
-          height={badgeHeight}
-          style={{ display: 'block', height: badgeHeight, width: 'auto' }}
+          width={Math.round(googlePlayHeight * 2.584)}
+          height={googlePlayHeight}
+          style={{ display: 'block', height: googlePlayHeight, width: 'auto' }}
           priority
         />
       </Link>
 
       {/* App Store Badge - Official (Black, per guidelines for multiple badges) */}
+      {/* Must be SMALLER than or equal to Google Play badge */}
       <Box
         sx={{
           opacity: 0.4,
@@ -68,9 +68,9 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         <Image
           src="/images/app-store-badges/app-store-badge-black-en.svg"
           alt="Download on the App Store - Coming Soon"
-          width={appStoreWidth}
-          height={badgeHeight}
-          style={{ display: 'block', height: badgeHeight, width: 'auto' }}
+          width={Math.round(appStoreHeight * 2.99)}
+          height={appStoreHeight}
+          style={{ display: 'block', height: appStoreHeight, width: 'auto' }}
         />
       </Box>
     </Stack>

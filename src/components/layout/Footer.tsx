@@ -154,6 +154,7 @@ export default function Footer() {
               Download
             </Typography>
             <Stack spacing={1.5}>
+              {/* Google Play badge must be same size or LARGER than App Store */}
               <MuiLink
                 href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
                 target="_blank"
@@ -177,9 +178,9 @@ export default function Footer() {
                 <Image
                   src="/images/app-store-badges/app-store-badge-black-en.svg"
                   alt="Download on the App Store - Coming Soon"
-                  width={120}
-                  height={40}
-                  style={{ display: 'block', height: '40px', width: 'auto' }}
+                  width={107}
+                  height={36}
+                  style={{ display: 'block', height: '36px', width: 'auto' }}
                 />
               </Box>
             </Stack>
