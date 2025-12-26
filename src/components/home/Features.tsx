@@ -75,6 +75,8 @@ export default function Features() {
                     position: 'relative',
                     height: 220,
                     overflow: 'hidden',
+                    borderTopLeftRadius: 12,
+                    borderTopRightRadius: 12,
                   }}
                 >
                   <Image

@@ -153,22 +153,34 @@ export default function Footer() {
             >
               Download
             </Typography>
-            <Stack spacing={2}>
+            <Stack spacing={1.5}>
               <MuiLink
                 href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
                 target="_blank"
                 rel="noopener noreferrer"
+                sx={{
+                  display: 'block',
+                  transition: 'opacity 0.2s ease',
+                  '&:hover': { opacity: 0.85 },
+                }}
               >
                 <Image
                   src="/images/app-store-badges/google-play-badge-official.svg"
                   alt="Get it on Google Play"
                   width={135}
                   height={40}
+                  style={{ display: 'block', height: '40px', width: 'auto' }}
                 />
               </MuiLink>
-              <Typography variant="caption" sx={{ color: colors.textTertiary }}>
-                iOS - Coming Soon
-              </Typography>
+              <Box sx={{ opacity: 0.4 }}>
+                <Image
+                  src="/images/app-store-badges/app-store-badge-official.svg"
+                  alt="Download on the App Store - Coming Soon"
+                  width={120}
+                  height={40}
+                  style={{ display: 'block', height: '40px', width: 'auto' }}
+                />
+              </Box>
             </Stack>
           </Grid>
         </Grid>
