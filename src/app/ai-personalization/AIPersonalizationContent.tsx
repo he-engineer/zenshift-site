@@ -136,7 +136,7 @@ export default function AIPersonalizationContent() {
                   sx={{
                     position: 'relative',
                     width: { xs: 240, md: 280 },
-                    height: { xs: 480, md: 560 },
+                    aspectRatio: '9 / 19.5',
                     borderRadius: 4,
                     overflow: 'hidden',
                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
@@ -146,7 +146,7 @@ export default function AIPersonalizationContent() {
                     src="/images/app-screenshots/coach-chat-prompts.png"
                     alt="AI Coach conversation"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                   />
                 </Box>
               </Box>
@@ -278,7 +278,7 @@ export default function AIPersonalizationContent() {
                   sx={{
                     position: 'relative',
                     width: { xs: 240, md: 280 },
-                    height: { xs: 480, md: 560 },
+                    aspectRatio: '9 / 19.5',
                     borderRadius: 4,
                     overflow: 'hidden',
                     boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.2)',
@@ -288,7 +288,7 @@ export default function AIPersonalizationContent() {
                     src="/images/app-screenshots/session-complete-feedback.png"
                     alt="Session feedback"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                   />
                 </Box>
               </Box>

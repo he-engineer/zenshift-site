@@ -196,7 +196,7 @@ export default function Hero() {
                 sx={{
                   position: 'relative',
                   width: { xs: 280, sm: 320 },
-                  height: { xs: 560, sm: 640 },
+                  aspectRatio: '9 / 19.5',
                   borderRadius: 4,
                   overflow: 'hidden',
                   boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
@@ -206,7 +206,7 @@ export default function Hero() {
                   src="/images/app-screenshots/home-recommendations.png"
                   alt="ZenShift app showing AI-powered recommendations"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'contain' }}
                   priority
                 />
               </Box>

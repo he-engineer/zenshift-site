@@ -221,7 +221,7 @@ export default function ProductContent() {
                       sx={{
                         position: 'relative',
                         width: { xs: 220, md: 260 },
-                        height: { xs: 440, md: 520 },
+                        aspectRatio: '9 / 19.5',
                         borderRadius: 4,
                         overflow: 'hidden',
                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
@@ -231,7 +231,7 @@ export default function ProductContent() {
                         src={feature.image}
                         alt={feature.title}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain' }}
                       />
                     </Box>
                   </Box>

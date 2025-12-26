@@ -82,7 +82,7 @@ export default function HowItWorks() {
                     sx={{
                       position: 'relative',
                       width: 140,
-                      height: 260,
+                      aspectRatio: '9 / 19.5',
                       borderRadius: 2,
                       overflow: 'hidden',
                       boxShadow: '0 10px 30px -5px rgba(0, 0, 0, 0.3)',
@@ -92,7 +92,7 @@ export default function HowItWorks() {
                       src={step.image}
                       alt={step.title}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'contain' }}
                     />
                   </Box>
                 </Box>

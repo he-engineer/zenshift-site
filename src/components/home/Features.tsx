@@ -105,7 +105,7 @@ export default function Features() {
                       bottom: 16,
                       right: 16,
                       width: 80,
-                      height: 160,
+                      aspectRatio: '9 / 19.5',
                       borderRadius: 2,
                       overflow: 'hidden',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
@@ -115,7 +115,7 @@ export default function Features() {
                       src={feature.screenshot}
                       alt={`${feature.title} screenshot`}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'contain' }}
                     />
                   </Box>
                 </Box>
