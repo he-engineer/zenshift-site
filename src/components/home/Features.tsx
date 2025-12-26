@@ -75,8 +75,8 @@ export default function Features() {
                     position: 'relative',
                     height: 220,
                     overflow: 'hidden',
-                    borderTopLeftRadius: 12,
-                    borderTopRightRadius: 12,
+                    borderTopLeftRadius: 6,
+                    borderTopRightRadius: 6,
                   }}
                 >
                   <Image
@@ -108,7 +108,7 @@ export default function Features() {
                       right: 16,
                       width: 80,
                       aspectRatio: '9 / 19.5',
-                      borderRadius: 1.5,
+                      borderRadius: 1,
                       overflow: 'hidden',
                       boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
                     }}

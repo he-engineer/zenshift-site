@@ -11,7 +11,7 @@ interface AppStoreButtonsProps {
   showComingSoon?: boolean;
 }
 
-export default function AppStoreButtons({ size = 'normal', showComingSoon = true }: AppStoreButtonsProps) {
+export default function AppStoreButtons({ size = 'normal', showComingSoon = false }: AppStoreButtonsProps) {
   // Badge dimensions per brand guidelines:
   // - Minimum height: 40px for onscreen display
   // - Official SVG badges maintain intrinsic aspect ratios
