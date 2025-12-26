@@ -15,8 +15,10 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
   // Badge dimensions per official brand guidelines:
   // - Minimum height: 40px for onscreen display
   // - Clear space: 1/4 of badge height around all sides
+  // - Google Play must be same size or LARGER than other badges
   // - Google Play official badge: 646x250 (2.584:1 ratio)
   // - App Store official badge: 119.66x40 (2.99:1 ratio)
+  // Both badges use same height to comply with Google Play requirement
   const badgeHeight = size === 'large' ? 50 : 40;
   const googlePlayWidth = Math.round(badgeHeight * 2.584);
   const appStoreWidth = Math.round(badgeHeight * 2.99);
