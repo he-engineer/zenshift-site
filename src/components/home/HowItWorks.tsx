@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ChatIcon from '@mui/icons-material/Chat';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { colors } from '@/theme/zenshift-theme';
+import { colors, gradients } from '@/theme/zenshift-theme';
 import SectionHeader from '@/components/shared/SectionHeader';
 
 const steps = [
@@ -15,21 +15,21 @@ const steps = [
     title: 'Open & Express',
     description: "Tell our AI Coach how you're feeling or what you need. No predefined categories—just natural conversation.",
     icon: ChatIcon,
-    image: '/images/app-screenshots/coach-chat-prompts.png',
+    image: '/images/meditation-photos/optimized/19_bamboo_forest/desktop.webp',
   },
   {
     number: 2,
     title: 'Get Matched',
     description: 'AI recommends the perfect session from our library—or creates one just for you in 2-3 minutes.',
     icon: AutoAwesomeIcon,
-    image: '/images/app-screenshots/coach-chat-recommendations.png',
+    image: '/images/meditation-photos/optimized/20_misty_layered_mountains/desktop.webp',
   },
   {
     number: 3,
     title: 'Feel Relief',
     description: 'Track your progress and build lasting mindfulness habits with personalized insights.',
     icon: FavoriteIcon,
-    image: '/images/app-screenshots/session-player.png',
+    image: '/images/meditation-photos/optimized/5_river_quiet_valley/desktop.webp',
   },
 ];
 
@@ -55,81 +55,102 @@ export default function HowItWorks() {
               <Paper
                 elevation={0}
                 sx={{
-                  height: '100%',
-                  bgcolor: colors.white,
+                  position: 'relative',
+                  height: { xs: 400, md: 480 },
                   borderRadius: 3,
                   overflow: 'hidden',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-8px)',
-                    boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
+                    boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.25)',
                   },
                 }}
               >
-                {/* Screenshot */}
+                {/* Background Image */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 0,
+                  }}
+                >
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+
+                {/* Content */}
                 <Box
                   sx={{
                     position: 'relative',
-                    height: 280,
-                    bgcolor: colors.deepNavy,
+                    zIndex: 1,
+                    height: '100%',
                     display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    overflow: 'hidden',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end',
                   }}
                 >
                   <Box
                     sx={{
-                      position: 'relative',
-                      width: 140,
-                      aspectRatio: '9 / 19.5',
-                      borderRadius: 1,
-                      overflow: 'hidden',
-                      boxShadow: '0 10px 30px -5px rgba(0, 0, 0, 0.3)',
-                    }}
-                  >
-                    <Image
-                      src={step.image}
-                      alt={step.title}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </Box>
-                </Box>
-
-                {/* Content */}
-                <Box sx={{ p: 3 }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 2,
-                      mb: 2,
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%)',
+                      p: 4,
+                      borderRadius: '0 0 12px 12px',
                     }}
                   >
                     <Box
                       sx={{
-                        width: 48,
-                        height: 48,
-                        borderRadius: '50%',
-                        bgcolor: colors.zenTeal,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        color: colors.white,
-                        fontWeight: 700,
-                        fontSize: '1.25rem',
+                        gap: 2,
+                        mb: 2,
                       }}
                     >
-                      {step.number}
+                      <Box
+                        sx={{
+                          width: 56,
+                          height: 56,
+                          borderRadius: '50%',
+                          bgcolor: colors.zenTeal,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: colors.white,
+                          fontWeight: 700,
+                          fontSize: '1.5rem',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                        }}
+                      >
+                        {step.number}
+                      </Box>
+                      <Typography
+                        variant="h5"
+                        component="h3"
+                        sx={{
+                          fontWeight: 600,
+                          color: colors.textPrimary,
+                          textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                        }}
+                      >
+                        {step.title}
+                      </Typography>
                     </Box>
-                    <Typography variant="h5" component="h3" sx={{ fontWeight: 600 }}>
-                      {step.title}
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: colors.textSecondary,
+                        lineHeight: 1.7,
+                        textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)',
+                      }}
+                    >
+                      {step.description}
                     </Typography>
                   </Box>
-                  <Typography variant="body2" sx={{ color: colors.textSecondaryLight, lineHeight: 1.7 }}>
-                    {step.description}
-                  </Typography>
                 </Box>
               </Paper>
             </Grid>
