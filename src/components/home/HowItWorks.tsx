@@ -98,7 +98,7 @@ export default function HowItWorks() {
                 >
                   <Box
                     sx={{
-                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%)',
+                      bgcolor: colors.white,
                       p: 4,
                       borderRadius: '0 0 12px 12px',
                     }}
@@ -123,7 +123,7 @@ export default function HowItWorks() {
                           color: colors.white,
                           fontWeight: 700,
                           fontSize: '1.5rem',
-                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                         }}
                       >
                         {step.number}
@@ -133,8 +133,7 @@ export default function HowItWorks() {
                         component="h3"
                         sx={{
                           fontWeight: 600,
-                          color: colors.textPrimary,
-                          textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                          color: colors.deepNavy,
                         }}
                       >
                         {step.title}
@@ -143,9 +142,8 @@ export default function HowItWorks() {
                     <Typography
                       variant="body1"
                       sx={{
-                        color: colors.textSecondary,
+                        color: colors.textSecondaryLight,
                         lineHeight: 1.7,
-                        textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)',
                       }}
                     >
                       {step.description}
