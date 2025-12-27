@@ -76,8 +76,12 @@ export default function Hero() {
                 maxWidth: 560,
               }}
             >
-              AI-powered sessions designed for busy professionals.
-              Open the app, share how you feel, find calm.
+              <Box component="span" sx={{ display: 'block' }}>
+                AI-powered sessions for a calm mind.
+              </Box>
+              <Box component="span" sx={{ display: 'block' }}>
+                Open the app, share how you feel, find calm.
+              </Box>
             </Typography>
 
             {/* Metrics */}
