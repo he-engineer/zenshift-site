@@ -12,20 +12,14 @@ interface AppStoreButtonsProps {
 }
 
 export default function AppStoreButtons({ size = 'normal', showComingSoon = false }: AppStoreButtonsProps) {
-  // Badge dimensions per official brand guidelines:
-  // - Minimum height: 40px for onscreen display
-  // - Clear space: 1/4 of badge height around all sides
-  // - Google Play must be same size or LARGER than other badges
-  // - Google Play official badge: 646x250 (2.584:1 ratio)
-  // - App Store official badge: 119.66x40 (2.99:1 ratio)
-  // Google Play badge is set LARGER to ensure compliance
-  const googlePlayHeight = size === 'large' ? 50 : 40;
-  const appStoreHeight = size === 'large' ? 45 : 36; // Smaller than Google Play per guidelines
+  // Badge dimensions - same height, auto width to preserve aspect ratio
+  // Both badges are now SVGs without padding, so same height = same visual size
+  const badgeHeight = size === 'large' ? 60 : 48;
 
   return (
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
-      spacing={2}
+      spacing={4}
       alignItems="center"
     >
       {/* Google Play Badge - Official (must be same size or LARGER than App Store) */}
@@ -46,11 +40,12 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         }}
       >
         <Image
-          src="/images/app-store-badges/google-play-badge-en.png"
+          src="/images/app-store-badges/google-play-badge-en.svg"
           alt="Get it on Google Play"
-          width={Math.round(googlePlayHeight * 2.584)}
-          height={googlePlayHeight}
-          style={{ display: 'block', height: googlePlayHeight, width: 'auto' }}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ display: 'block', height: badgeHeight, width: 'auto' }}
           priority
         />
       </Link>
@@ -68,9 +63,10 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         <Image
           src="/images/app-store-badges/app-store-badge-black-en.svg"
           alt="Download on the App Store - Coming Soon"
-          width={Math.round(appStoreHeight * 2.99)}
-          height={appStoreHeight}
-          style={{ display: 'block', height: appStoreHeight, width: 'auto' }}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ display: 'block', height: badgeHeight, width: 'auto' }}
         />
       </Box>
     </Stack>

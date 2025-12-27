@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Container, Grid, Link as MuiLink, Typography, IconButton, Stack } from '@mui/material';
+import { Box, Container, Grid, Link as MuiLink, Typography, Stack } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { colors } from '@/theme/zenshift-theme';
@@ -154,7 +154,6 @@ export default function Footer() {
               Download
             </Typography>
             <Stack spacing={1.5}>
-              {/* Google Play badge must be same size or LARGER than App Store */}
               <MuiLink
                 href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
                 target="_blank"
@@ -167,20 +166,22 @@ export default function Footer() {
                 }}
               >
                 <Image
-                  src="/images/app-store-badges/google-play-badge-en.png"
+                  src="/images/app-store-badges/google-play-badge-en.svg"
                   alt="Get it on Google Play"
-                  width={103}
-                  height={40}
-                  style={{ display: 'block', height: '40px', width: 'auto' }}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ display: 'block', height: 40, width: 'auto' }}
                 />
               </MuiLink>
               <Box sx={{ opacity: 0.4 }} title="iOS - Coming Soon">
                 <Image
                   src="/images/app-store-badges/app-store-badge-black-en.svg"
                   alt="Download on the App Store - Coming Soon"
-                  width={107}
-                  height={36}
-                  style={{ display: 'block', height: '36px', width: 'auto' }}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ display: 'block', height: 40, width: 'auto' }}
                 />
               </Box>
             </Stack>
