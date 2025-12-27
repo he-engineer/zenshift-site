@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import { Box, Container, Typography, Stack } from '@mui/material';
-import Image from 'next/image';
-import { colors, gradients } from '@/theme/zenshift-theme';
+import { colors } from '@/theme/zenshift-theme';
 import AppStoreButtons from '@/components/shared/AppStoreButtons';
 
 export default function DownloadCTA() {
@@ -28,12 +27,6 @@ export default function DownloadCTA() {
           zIndex: 0,
         }}
       >
-        <Image
-          src="/images/meditation-photos/optimized/20_misty_layered_mountains/desktop.webp"
-          alt="Misty mountains"
-          fill
-          style={{ objectFit: 'cover' }}
-        />
         <Box
           sx={{
             position: 'absolute',
@@ -41,7 +34,7 @@ export default function DownloadCTA() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: gradients.darkOverlay,
+            bgcolor: colors.zenTeal,
           }}
         />
       </Box>

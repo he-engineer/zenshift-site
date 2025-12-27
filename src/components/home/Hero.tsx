@@ -4,8 +4,7 @@ import * as React from 'react';
 import { Box, Container, Typography, Button, Stack, Grid } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { colors, gradients } from '@/theme/zenshift-theme';
-import AppStoreButtons from '@/components/shared/AppStoreButtons';
+import { colors } from '@/theme/zenshift-theme';
 
 export default function Hero() {
   return (
@@ -31,14 +30,6 @@ export default function Hero() {
           zIndex: 0,
         }}
       >
-        <Image
-          src="/images/meditation-photos/optimized/13_misty_mountains/desktop.webp"
-          alt="Misty mountains background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
-        {/* Dark overlay */}
         <Box
           sx={{
             position: 'absolute',
@@ -46,7 +37,7 @@ export default function Hero() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: gradients.darkOverlay,
+            bgcolor: colors.zenTeal,
           }}
         />
       </Box>
