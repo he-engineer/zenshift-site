@@ -40,7 +40,7 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         }}
       >
         <Image
-          src="/images/app-store-badges/google-play-badge-en.svg"
+          src="/images/app-store-badges/google-play-badge.avif"
           alt="Get it on Google Play"
           width={0}
           height={0}
@@ -61,7 +61,7 @@ export default function AppStoreButtons({ size = 'normal', showComingSoon = fals
         title="iOS - Coming Soon"
       >
         <Image
-          src="/images/app-store-badges/app-store-badge-black-en.svg"
+          src="/images/app-store-badges/app-store-badge.avif"
           alt="Download on the App Store - Coming Soon"
           width={0}
           height={0}
