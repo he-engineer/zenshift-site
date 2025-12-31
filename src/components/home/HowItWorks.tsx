@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Container, Typography, Grid, Paper } from '@mui/material';
+import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 import Image from 'next/image';
 import ChatIcon from '@mui/icons-material/Chat';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { colors, gradients } from '@/theme/zenshift-theme';
+import { colors } from '@/theme/zenshift-theme';
 import SectionHeader from '@/components/shared/SectionHeader';
 
 const steps = [
@@ -52,105 +52,103 @@ export default function HowItWorks() {
         <Grid container spacing={{ xs: 4, md: 6 }}>
           {steps.map((step) => (
             <Grid item xs={12} md={4} key={step.number}>
-              <Paper
+              <Card
                 elevation={0}
                 sx={{
-                  position: 'relative',
                   height: { xs: 400, md: 480 },
                   borderRadius: 3,
                   overflow: 'hidden',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  border: `1px solid ${colors.borderSubtle}`,
+                  transition: 'all 0.3s ease',
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.25)',
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 12px 24px -8px rgba(0, 0, 0, 0.12)',
+                    '& .how-it-works-image': {
+                      transform: 'scale(1.05)',
+                    },
                   },
                 }}
               >
-                {/* Background Image */}
+                {/* Image Container */}
                 <Box
                   sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    zIndex: 0,
+                    position: 'relative',
+                    height: { xs: 220, md: 260 },
+                    overflow: 'hidden',
+                    borderTopLeftRadius: 6,
+                    borderTopRightRadius: 6,
                   }}
                 >
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    style={{ objectFit: 'cover' }}
+                    className="how-it-works-image"
+                    style={{
+                      objectFit: 'cover',
+                      transition: 'transform 0.3s ease',
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%)',
+                    }}
                   />
                 </Box>
 
-                {/* Content */}
-                <Box
-                  sx={{
-                    position: 'relative',
-                    zIndex: 1,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-end',
-                  }}
-                >
+                <CardContent sx={{ p: 3 }}>
                   <Box
                     sx={{
-                      bgcolor: colors.white,
-                      p: 4,
-                      borderRadius: '0 0 12px 12px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 2,
+                      mb: 1.5,
                     }}
                   >
                     <Box
                       sx={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: '50%',
+                        bgcolor: colors.zenTeal,
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 2,
-                        mb: 2,
+                        justifyContent: 'center',
+                        color: colors.white,
+                        fontWeight: 700,
+                        fontSize: '1.5rem',
+                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                       }}
                     >
-                      <Box
-                        sx={{
-                          width: 56,
-                          height: 56,
-                          borderRadius: '50%',
-                          bgcolor: colors.zenTeal,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: colors.white,
-                          fontWeight: 700,
-                          fontSize: '1.5rem',
-                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                        }}
-                      >
-                        {step.number}
-                      </Box>
-                      <Typography
-                        variant="h5"
-                        component="h3"
-                        sx={{
-                          fontWeight: 600,
-                          color: colors.deepNavy,
-                        }}
-                      >
-                        {step.title}
-                      </Typography>
+                      {step.number}
                     </Box>
                     <Typography
-                      variant="body1"
+                      variant="h5"
+                      component="h3"
                       sx={{
-                        color: colors.textSecondaryLight,
-                        lineHeight: 1.7,
+                        fontWeight: 600,
+                        color: colors.textPrimaryLight,
                       }}
                     >
-                      {step.description}
+                      {step.title}
                     </Typography>
                   </Box>
-                </Box>
-              </Paper>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: colors.textSecondaryLight,
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {step.description}
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>
