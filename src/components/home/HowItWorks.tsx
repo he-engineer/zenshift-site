@@ -13,7 +13,7 @@ const steps = [
   {
     number: 1,
     title: 'Open & Express',
-    description: "Tell our AI Coach how you're feeling or what you need. No predefined categories—just natural conversation.",
+    description: "Tell ZenShift how you're feeling or what you need—through simple taps or natural conversation.",
     icon: ChatIcon,
     image: '/images/meditation-photos/optimized/19_bamboo_forest/desktop.webp',
   },
