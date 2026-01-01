@@ -5,6 +5,7 @@ import { Box, Container, Grid, Link as MuiLink, Typography, Stack } from '@mui/m
 import Link from 'next/link';
 import Image from 'next/image';
 import { colors } from '@/theme/zenshift-theme';
+import { APP_STORE_URL, PLAY_STORE_URL } from '@/lib/storeLinks';
 
 const footerLinks = {
   product: [
@@ -155,7 +156,7 @@ export default function Footer() {
             </Typography>
             <Stack spacing={1.5}>
               <MuiLink
-                href="https://play.google.com/store/apps/details?id=com.zenshift.meditation"
+                href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Get it on Google Play"
@@ -174,16 +175,26 @@ export default function Footer() {
                   style={{ display: 'block', height: 40, width: 'auto' }}
                 />
               </MuiLink>
-              <Box sx={{ opacity: 0.4 }} title="iOS - Coming Soon">
+              <MuiLink
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download on the App Store"
+                sx={{
+                  display: 'block',
+                  transition: 'opacity 0.2s ease',
+                  '&:hover': { opacity: 0.85 },
+                }}
+              >
                 <Image
                   src="/images/app-store-badges/app-store-badge.avif"
-                  alt="Download on the App Store - Coming Soon"
+                  alt="Download on the App Store"
                   width={0}
                   height={0}
                   sizes="100vw"
                   style={{ display: 'block', height: 40, width: 'auto' }}
                 />
-              </Box>
+              </MuiLink>
             </Stack>
           </Grid>
         </Grid>
