@@ -25,7 +25,7 @@ const faqCategories = [
       },
       {
         q: 'What platforms is ZenShift available on?',
-        a: 'ZenShift is currently available on Android (8.0+) via Google Play. iOS support is coming soon. Your progress syncs across all your devices.',
+        a: 'ZenShift is available on Android (8.0+) via Google Play and iOS (15+) on the App Store. Your progress syncs across all your devices.',
       },
       {
         q: 'Do I need an account to use ZenShift?',
@@ -76,7 +76,7 @@ const faqCategories = [
     questions: [
       {
         q: 'What are the system requirements?',
-        a: 'Android: 8.0+ (API 26+). iOS: Coming soon (iOS 15+ expected). The app requires approximately 100MB of storage.',
+        a: 'Android: 8.0+ (API 26+). iOS: 15+. The app requires approximately 100MB of storage.',
       },
       {
         q: 'Does the app work offline?',

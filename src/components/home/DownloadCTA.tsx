@@ -86,7 +86,7 @@ export default function DownloadCTA() {
             >
               <strong style={{ color: colors.textPrimary }}>Available Now:</strong> Android 8.0+ on Google Play
               <br />
-              <strong style={{ color: colors.textPrimary }}>Coming Soon:</strong> iOS with all the same great features
+              <strong style={{ color: colors.textPrimary }}>Available Now:</strong> iOS 15+ on the App Store
               <br />
               <strong style={{ color: colors.textPrimary }}>Privacy:</strong> Your data stays private and secure
             </Typography>

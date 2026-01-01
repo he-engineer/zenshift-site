@@ -321,7 +321,7 @@ export default function ProductContent() {
                 <Box sx={{ textAlign: 'left' }}>
                   <Typography variant="h6">iOS</Typography>
                   <Typography variant="body2" sx={{ color: colors.textSecondaryLight }}>
-                    Coming Soon
+                    iOS 15+
                   </Typography>
                 </Box>
               </Box>
