@@ -170,13 +170,25 @@ Changes automatically apply everywhere.
 
 ## Deployment
 
-The site is configured for static export and GitHub Pages hosting:
+The site is configured for static export and GitHub Pages hosting with automatic deployment via GitHub Actions.
 
+**Automatic Deployment:**
+- Push to `main` branch triggers GitHub Actions workflow
+- Workflow builds the site and deploys to GitHub Pages
+- Domain: https://zenshift.onepingfanventure.com (configured via `public/CNAME`)
+
+**Local Build (for testing):**
 ```bash
 npm run build   # Generates out/ directory with static files
 ```
 
-Push the `out/` directory contents to GitHub Pages, or configure GitHub Actions to do this automatically.
+**GitHub Actions Workflow:** `.github/workflows/deploy.yml`
+- Triggers on push to `main` or manual dispatch
+- Uses Node 20, installs deps, builds, and deploys to GitHub Pages
+
+**One-time Setup (already done):**
+1. Go to repo Settings > Pages
+2. Set Source to "GitHub Actions"
 
 ## Key External Dependencies & Versions
 
