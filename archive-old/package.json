@@ -1,0 +1,11 @@
+{
+  "name": "zenshift-site",
+  "version": "1.0.0",
+  "description": "ZenShift meditation app website",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  }
+}

@@ -20,3 +20,5 @@ ehthumbs.db
 # Build/Temp
 dist/
 build/
+.next/
+out/
